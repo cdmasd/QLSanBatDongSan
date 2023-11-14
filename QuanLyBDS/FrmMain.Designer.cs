@@ -40,7 +40,7 @@
             PanelMain.MinimumSize = new Size(1, 1);
             PanelMain.Name = "PanelMain";
             PanelMain.Radius = 0;
-            PanelMain.Size = new Size(800, 415);
+            PanelMain.Size = new Size(900, 565);
             PanelMain.Style = Sunny.UI.UIStyle.Custom;
             PanelMain.TabIndex = 0;
             PanelMain.Text = null;
@@ -49,9 +49,10 @@
             // FrmMain
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(900, 600);
             Controls.Add(PanelMain);
-            MaximumSize = new Size(800, 450);
+            MaximizeBox = false;
+            MaximumSize = new Size(900, 600);
             Name = "FrmMain";
             ShowRadius = false;
             Style = Sunny.UI.UIStyle.Custom;

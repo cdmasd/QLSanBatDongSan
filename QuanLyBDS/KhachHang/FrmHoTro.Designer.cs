@@ -74,7 +74,7 @@
             // btnGuiyeucau
             // 
             btnGuiyeucau.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuiyeucau.Location = new Point(509, 368);
+            btnGuiyeucau.Location = new Point(610, 518);
             btnGuiyeucau.MinimumSize = new Size(1, 1);
             btnGuiyeucau.Name = "btnGuiyeucau";
             btnGuiyeucau.Size = new Size(100, 35);
@@ -85,7 +85,7 @@
             // txtSodt
             // 
             txtSodt.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSodt.Location = new Point(371, 38);
+            txtSodt.Location = new Point(471, 38);
             txtSodt.Margin = new Padding(4, 5, 4, 5);
             txtSodt.MinimumSize = new Size(1, 16);
             txtSodt.Name = "txtSodt";
@@ -100,7 +100,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(371, 9);
+            label3.Location = new Point(471, 9);
             label3.Name = "label3";
             label3.Size = new Size(192, 19);
             label3.TabIndex = 3;
@@ -112,10 +112,11 @@
             txtChitiethotro.Location = new Point(16, 101);
             txtChitiethotro.Margin = new Padding(4, 5, 4, 5);
             txtChitiethotro.MinimumSize = new Size(1, 16);
+            txtChitiethotro.Multiline = true;
             txtChitiethotro.Name = "txtChitiethotro";
             txtChitiethotro.Padding = new Padding(5);
             txtChitiethotro.ShowText = false;
-            txtChitiethotro.Size = new Size(593, 249);
+            txtChitiethotro.Size = new Size(693, 409);
             txtChitiethotro.TabIndex = 5;
             txtChitiethotro.TextAlignment = ContentAlignment.MiddleLeft;
             txtChitiethotro.Watermark = "";
@@ -124,7 +125,7 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(622, 415);
+            ClientSize = new Size(722, 565);
             Controls.Add(txtChitiethotro);
             Controls.Add(txtSodt);
             Controls.Add(label3);

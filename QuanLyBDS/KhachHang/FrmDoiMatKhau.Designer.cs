@@ -41,7 +41,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(299, 61);
+            label1.Location = new Point(234, 150);
             label1.Name = "label1";
             label1.Size = new Size(45, 19);
             label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(260, 131);
+            label2.Location = new Point(234, 220);
             label2.Name = "label2";
             label2.Size = new Size(122, 19);
             label2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(273, 201);
+            label3.Location = new Point(234, 290);
             label3.Name = "label3";
             label3.Size = new Size(97, 19);
             label3.TabIndex = 2;
@@ -70,7 +70,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(201, 91);
+            txtEmail.Location = new Point(234, 174);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
             txtEmail.Name = "txtEmail";
@@ -84,7 +84,7 @@
             // txtMatkhauhientai
             // 
             txtMatkhauhientai.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMatkhauhientai.Location = new Point(201, 161);
+            txtMatkhauhientai.Location = new Point(234, 244);
             txtMatkhauhientai.Margin = new Padding(4, 5, 4, 5);
             txtMatkhauhientai.MinimumSize = new Size(1, 16);
             txtMatkhauhientai.Name = "txtMatkhauhientai";
@@ -98,7 +98,7 @@
             // txtMatkhaumoi
             // 
             txtMatkhaumoi.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMatkhaumoi.Location = new Point(201, 231);
+            txtMatkhaumoi.Location = new Point(234, 314);
             txtMatkhaumoi.Margin = new Padding(4, 5, 4, 5);
             txtMatkhaumoi.MinimumSize = new Size(1, 16);
             txtMatkhaumoi.Name = "txtMatkhaumoi";
@@ -112,7 +112,7 @@
             // btnDoimatkhau
             // 
             btnDoimatkhau.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoimatkhau.Location = new Point(271, 271);
+            btnDoimatkhau.Location = new Point(304, 354);
             btnDoimatkhau.MinimumSize = new Size(1, 1);
             btnDoimatkhau.Name = "btnDoimatkhau";
             btnDoimatkhau.Size = new Size(100, 35);
@@ -124,7 +124,7 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(622, 415);
+            ClientSize = new Size(722, 565);
             Controls.Add(btnDoimatkhau);
             Controls.Add(txtMatkhaumoi);
             Controls.Add(txtMatkhauhientai);

@@ -67,7 +67,7 @@
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(178, 415);
+            flowLayoutPanel1.Size = new Size(178, 565);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -228,14 +228,14 @@
             panelKhachHang.Dock = DockStyle.Fill;
             panelKhachHang.Location = new Point(178, 0);
             panelKhachHang.Name = "panelKhachHang";
-            panelKhachHang.Size = new Size(622, 415);
+            panelKhachHang.Size = new Size(722, 565);
             panelKhachHang.TabIndex = 1;
             // 
             // FrmMainKhachHang
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(800, 415);
+            ClientSize = new Size(900, 565);
             Controls.Add(panelKhachHang);
             Controls.Add(flowLayoutPanel1);
             Name = "FrmMainKhachHang";

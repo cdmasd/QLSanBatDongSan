@@ -28,7 +28,22 @@
     <Compile Update="KhachHang\FrmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NhanVien\FrmDaduyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\FrmDoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\FrmDuyetbai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\FrmHotro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NhanVien\FrmMainNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\FrmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

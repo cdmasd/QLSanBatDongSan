@@ -31,6 +31,7 @@
             UIPanel = new Sunny.UI.UIPanel();
             picBackground = new PictureBox();
             PanelDangNhap = new Sunny.UI.UIPanel();
+            label3 = new Label();
             btnLayma = new Sunny.UI.UIButton();
             txtXacthuc = new Sunny.UI.UITextBox();
             btnKhach = new Sunny.UI.UIButton();
@@ -71,7 +72,7 @@
             UIPanel.MinimumSize = new Size(1, 1);
             UIPanel.Name = "UIPanel";
             UIPanel.Radius = 0;
-            UIPanel.Size = new Size(484, 415);
+            UIPanel.Size = new Size(484, 565);
             UIPanel.TabIndex = 0;
             UIPanel.Text = null;
             UIPanel.TextAlignment = ContentAlignment.MiddleCenter;
@@ -82,13 +83,14 @@
             picBackground.Image = Properties.Resources.building;
             picBackground.Location = new Point(0, 0);
             picBackground.Name = "picBackground";
-            picBackground.Size = new Size(484, 415);
-            picBackground.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBackground.Size = new Size(484, 565);
+            picBackground.SizeMode = PictureBoxSizeMode.AutoSize;
             picBackground.TabIndex = 0;
             picBackground.TabStop = false;
             // 
             // PanelDangNhap
             // 
+            PanelDangNhap.Controls.Add(label3);
             PanelDangNhap.Controls.Add(btnLayma);
             PanelDangNhap.Controls.Add(txtXacthuc);
             PanelDangNhap.Controls.Add(btnKhach);
@@ -121,15 +123,25 @@
             PanelDangNhap.MinimumSize = new Size(1, 1);
             PanelDangNhap.Name = "PanelDangNhap";
             PanelDangNhap.Radius = 0;
-            PanelDangNhap.Size = new Size(316, 415);
+            PanelDangNhap.Size = new Size(416, 565);
             PanelDangNhap.TabIndex = 1;
             PanelDangNhap.Text = null;
             PanelDangNhap.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(66, 342);
+            label3.Name = "label3";
+            label3.Size = new Size(99, 19);
+            label3.TabIndex = 50;
+            label3.Text = "Mã xác nhận :";
+            // 
             // btnLayma
             // 
             btnLayma.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLayma.Location = new Point(206, 292);
+            btnLayma.Location = new Point(260, 367);
             btnLayma.MinimumSize = new Size(1, 1);
             btnLayma.Name = "btnLayma";
             btnLayma.Size = new Size(100, 29);
@@ -140,7 +152,7 @@
             // txtXacthuc
             // 
             txtXacthuc.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtXacthuc.Location = new Point(12, 292);
+            txtXacthuc.Location = new Point(72, 367);
             txtXacthuc.Margin = new Padding(4, 5, 4, 5);
             txtXacthuc.MinimumSize = new Size(1, 16);
             txtXacthuc.Name = "txtXacthuc";
@@ -149,12 +161,12 @@
             txtXacthuc.Size = new Size(187, 29);
             txtXacthuc.TabIndex = 40;
             txtXacthuc.TextAlignment = ContentAlignment.MiddleLeft;
-            txtXacthuc.Watermark = "Nhập mã xác thực";
+            txtXacthuc.Watermark = "";
             // 
             // btnKhach
             // 
             btnKhach.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnKhach.Location = new Point(104, 354);
+            btnKhach.Location = new Point(159, 439);
             btnKhach.MinimumSize = new Size(1, 1);
             btnKhach.Name = "btnKhach";
             btnKhach.Size = new Size(116, 35);
@@ -167,7 +179,7 @@
             btnDangNhapre.ActiveLinkColor = Color.FromArgb(220, 155, 40);
             btnDangNhapre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnDangNhapre.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            btnDangNhapre.Location = new Point(172, 380);
+            btnDangNhapre.Location = new Point(227, 497);
             btnDangNhapre.Name = "btnDangNhapre";
             btnDangNhapre.Size = new Size(96, 26);
             btnDangNhapre.TabIndex = 45;
@@ -180,7 +192,7 @@
             // lb6re
             // 
             lb6re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lb6re.Location = new Point(47, 382);
+            lb6re.Location = new Point(102, 499);
             lb6re.Name = "lb6re";
             lb6re.Size = new Size(131, 23);
             lb6re.TabIndex = 44;
@@ -190,7 +202,7 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegister.Location = new Point(108, 338);
+            btnRegister.Location = new Point(159, 431);
             btnRegister.MinimumSize = new Size(1, 1);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(100, 35);
@@ -202,7 +214,7 @@
             // txtPasswordre
             // 
             txtPasswordre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPasswordre.Location = new Point(10, 249);
+            txtPasswordre.Location = new Point(66, 307);
             txtPasswordre.Margin = new Padding(4, 5, 4, 5);
             txtPasswordre.MinimumSize = new Size(1, 16);
             txtPasswordre.Name = "txtPasswordre";
@@ -217,7 +229,7 @@
             // 
             lb5re.AutoSize = true;
             lb5re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lb5re.Location = new Point(9, 225);
+            lb5re.Location = new Point(66, 282);
             lb5re.Name = "lb5re";
             lb5re.Size = new Size(77, 19);
             lb5re.TabIndex = 41;
@@ -226,7 +238,7 @@
             // txtSoDTre
             // 
             txtSoDTre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSoDTre.Location = new Point(11, 187);
+            txtSoDTre.Location = new Point(66, 247);
             txtSoDTre.Margin = new Padding(4, 5, 4, 5);
             txtSoDTre.MinimumSize = new Size(1, 16);
             txtSoDTre.Name = "txtSoDTre";
@@ -241,7 +253,7 @@
             // 
             lb4re.AutoSize = true;
             lb4re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lb4re.Location = new Point(10, 163);
+            lb4re.Location = new Point(66, 223);
             lb4re.Name = "lb4re";
             lb4re.Size = new Size(102, 19);
             lb4re.TabIndex = 37;
@@ -250,7 +262,7 @@
             // txtHoTenre
             // 
             txtHoTenre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtHoTenre.Location = new Point(11, 128);
+            txtHoTenre.Location = new Point(66, 187);
             txtHoTenre.Margin = new Padding(4, 5, 4, 5);
             txtHoTenre.MinimumSize = new Size(1, 16);
             txtHoTenre.Name = "txtHoTenre";
@@ -265,7 +277,7 @@
             // 
             lb3re.AutoSize = true;
             lb3re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lb3re.Location = new Point(10, 104);
+            lb3re.Location = new Point(66, 162);
             lb3re.Name = "lb3re";
             lb3re.Size = new Size(79, 19);
             lb3re.TabIndex = 38;
@@ -274,7 +286,7 @@
             // txtEmailre
             // 
             txtEmailre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmailre.Location = new Point(12, 68);
+            txtEmailre.Location = new Point(66, 127);
             txtEmailre.Margin = new Padding(4, 5, 4, 5);
             txtEmailre.MinimumSize = new Size(1, 16);
             txtEmailre.Name = "txtEmailre";
@@ -289,7 +301,7 @@
             // 
             lb2re.AutoSize = true;
             lb2re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lb2re.Location = new Point(11, 44);
+            lb2re.Location = new Point(66, 102);
             lb2re.Name = "lb2re";
             lb2re.Size = new Size(53, 19);
             lb2re.TabIndex = 35;
@@ -297,8 +309,8 @@
             // 
             // lb1re
             // 
-            lb1re.Font = new Font("Roboto Condensed", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lb1re.Location = new Point(79, 8);
+            lb1re.Font = new Font("Roboto Condensed", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            lb1re.Location = new Point(136, 38);
             lb1re.Name = "lb1re";
             lb1re.Size = new Size(171, 33);
             lb1re.TabIndex = 34;
@@ -310,7 +322,7 @@
             btnTaoTaiKhoan.ActiveLinkColor = Color.FromArgb(220, 155, 40);
             btnTaoTaiKhoan.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnTaoTaiKhoan.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            btnTaoTaiKhoan.Location = new Point(184, 321);
+            btnTaoTaiKhoan.Location = new Point(239, 396);
             btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             btnTaoTaiKhoan.Size = new Size(96, 26);
             btnTaoTaiKhoan.TabIndex = 33;
@@ -322,7 +334,7 @@
             // uiLabel2
             // 
             uiLabel2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLabel2.Location = new Point(47, 319);
+            uiLabel2.Location = new Point(102, 394);
             uiLabel2.Name = "uiLabel2";
             uiLabel2.Size = new Size(140, 23);
             uiLabel2.TabIndex = 32;
@@ -332,7 +344,7 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLogin.Location = new Point(112, 270);
+            btnLogin.Location = new Point(167, 342);
             btnLogin.MinimumSize = new Size(1, 1);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(100, 35);
@@ -345,7 +357,7 @@
             btnForgotPassword.ActiveLinkColor = Color.FromArgb(220, 155, 40);
             btnForgotPassword.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnForgotPassword.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            btnForgotPassword.Location = new Point(185, 233);
+            btnForgotPassword.Location = new Point(240, 291);
             btnForgotPassword.Name = "btnForgotPassword";
             btnForgotPassword.Size = new Size(121, 26);
             btnForgotPassword.TabIndex = 30;
@@ -356,7 +368,7 @@
             // chkRemember
             // 
             chkRemember.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            chkRemember.Location = new Point(11, 230);
+            chkRemember.Location = new Point(66, 288);
             chkRemember.MinimumSize = new Size(1, 1);
             chkRemember.Name = "chkRemember";
             chkRemember.Size = new Size(150, 29);
@@ -366,7 +378,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.Location = new Point(11, 192);
+            txtPassword.Location = new Point(66, 247);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.MinimumSize = new Size(1, 16);
             txtPassword.Name = "txtPassword";
@@ -380,7 +392,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(12, 123);
+            txtEmail.Location = new Point(67, 178);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
             txtEmail.Name = "txtEmail";
@@ -394,7 +406,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(10, 168);
+            label2.Location = new Point(65, 223);
             label2.Name = "label2";
             label2.Size = new Size(83, 20);
             label2.TabIndex = 26;
@@ -403,7 +415,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 99);
+            label1.Location = new Point(66, 154);
             label1.Name = "label1";
             label1.Size = new Size(56, 20);
             label1.TabIndex = 25;
@@ -411,10 +423,10 @@
             // 
             // uiLabel1
             // 
-            uiLabel1.Font = new Font("Roboto Condensed", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(81, 44);
+            uiLabel1.Font = new Font("Roboto Condensed", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            uiLabel1.Location = new Point(108, 48);
             uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(171, 33);
+            uiLabel1.Size = new Size(227, 33);
             uiLabel1.TabIndex = 24;
             uiLabel1.Text = "Login To System";
             uiLabel1.TextAlign = ContentAlignment.MiddleCenter;
@@ -423,7 +435,7 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(800, 415);
+            ClientSize = new Size(900, 565);
             Controls.Add(PanelDangNhap);
             Controls.Add(UIPanel);
             Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -433,6 +445,7 @@
             Text = "FrmDangNhap";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
             UIPanel.ResumeLayout(false);
+            UIPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picBackground).EndInit();
             PanelDangNhap.ResumeLayout(false);
             PanelDangNhap.PerformLayout();
@@ -469,5 +482,6 @@
         private Sunny.UI.UIButton btnKhach;
         private Sunny.UI.UIButton btnLayma;
         private Sunny.UI.UITextBox txtXacthuc;
+        private Label label3;
     }
 }

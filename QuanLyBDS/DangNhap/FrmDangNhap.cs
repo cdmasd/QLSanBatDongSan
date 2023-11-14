@@ -59,6 +59,7 @@ namespace QuanLyBDS
             txtXacthuc.Visible = false;
             btnLayma.Enabled = false;
             btnLayma.Visible = false;
+            label3.Visible = false;
         }
         void RegisterView()
         {
@@ -84,6 +85,7 @@ namespace QuanLyBDS
             txtXacthuc.Visible = true;
             btnLayma.Enabled = true;
             btnLayma.Visible = true;
+            label3.Visible = true;
             // Login
             uiLabel1.Visible = false;
             label1.Visible = false;

@@ -43,7 +43,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(232, 33);
+            label1.Location = new Point(260, 117);
             label1.Name = "label1";
             label1.Size = new Size(60, 19);
             label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(232, 104);
+            label2.Location = new Point(260, 188);
             label2.Name = "label2";
             label2.Size = new Size(53, 19);
             label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(232, 175);
+            label3.Location = new Point(260, 259);
             label3.Name = "label3";
             label3.Size = new Size(102, 19);
             label3.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(232, 246);
+            label4.Location = new Point(260, 330);
             label4.Name = "label4";
             label4.Size = new Size(54, 19);
             label4.TabIndex = 3;
@@ -82,7 +82,7 @@
             // txtHoten
             // 
             txtHoten.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtHoten.Location = new Point(232, 66);
+            txtHoten.Location = new Point(260, 150);
             txtHoten.Margin = new Padding(4, 5, 4, 5);
             txtHoten.MinimumSize = new Size(1, 16);
             txtHoten.Name = "txtHoten";
@@ -96,7 +96,7 @@
             // txtEmail
             // 
             txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(232, 137);
+            txtEmail.Location = new Point(260, 221);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
             txtEmail.Name = "txtEmail";
@@ -110,7 +110,7 @@
             // txtSdt
             // 
             txtSdt.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSdt.Location = new Point(232, 208);
+            txtSdt.Location = new Point(260, 292);
             txtSdt.Margin = new Padding(4, 5, 4, 5);
             txtSdt.MinimumSize = new Size(1, 16);
             txtSdt.Name = "txtSdt";
@@ -125,7 +125,7 @@
             // 
             txtSodu.Enabled = false;
             txtSodu.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSodu.Location = new Point(232, 279);
+            txtSodu.Location = new Point(260, 363);
             txtSodu.Margin = new Padding(4, 5, 4, 5);
             txtSodu.MinimumSize = new Size(1, 16);
             txtSodu.Name = "txtSodu";
@@ -139,7 +139,7 @@
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(281, 332);
+            btnUpdate.Location = new Point(309, 416);
             btnUpdate.MinimumSize = new Size(1, 1);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(100, 35);
@@ -151,7 +151,7 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(622, 415);
+            ClientSize = new Size(722, 565);
             Controls.Add(btnUpdate);
             Controls.Add(txtSodu);
             Controls.Add(txtSdt);

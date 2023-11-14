@@ -30,28 +30,25 @@
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel1 = new Panel();
-            btnThongtin = new Button();
+            btnKhachhang = new Button();
             panel2 = new Panel();
             btnDuyetbai = new Button();
-            panel3 = new Panel();
-            btnHotro = new Button();
+            panel7 = new Panel();
+            btnDaduyet = new Button();
             panel4 = new Panel();
-            btnDahotro = new Button();
+            btnHotro = new Button();
             panel5 = new Panel();
-            btnDoimk = new Button();
+            btnDoimatkhau = new Button();
             panel6 = new Panel();
             btnDangxuat = new Button();
-            panelKhachHang = new Panel();
-            panel7 = new Panel();
-            btnDanhsachbaidang = new Button();
+            panelNhanVien = new Panel();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            panel7.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
-            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -62,34 +59,34 @@
             flowLayoutPanel1.Controls.Add(panel7);
             flowLayoutPanel1.Controls.Add(panel4);
             flowLayoutPanel1.Controls.Add(panel5);
-            flowLayoutPanel1.Controls.Add(panel3);
             flowLayoutPanel1.Controls.Add(panel6);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(178, 415);
+            flowLayoutPanel1.Size = new Size(178, 565);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnThongtin);
+            panel1.Controls.Add(btnKhachhang);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(175, 32);
             panel1.TabIndex = 0;
             // 
-            // btnThongtin
+            // btnKhachhang
             // 
-            btnThongtin.BackColor = SystemColors.MenuHighlight;
-            btnThongtin.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThongtin.ForeColor = Color.White;
-            btnThongtin.Location = new Point(-11, -8);
-            btnThongtin.Name = "btnThongtin";
-            btnThongtin.Size = new Size(192, 51);
-            btnThongtin.TabIndex = 1;
-            btnThongtin.Text = "Danh sách khách hàng";
-            btnThongtin.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnThongtin.UseVisualStyleBackColor = false;
+            btnKhachhang.BackColor = SystemColors.MenuHighlight;
+            btnKhachhang.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKhachhang.ForeColor = Color.White;
+            btnKhachhang.Location = new Point(-11, -8);
+            btnKhachhang.Name = "btnKhachhang";
+            btnKhachhang.Size = new Size(192, 51);
+            btnKhachhang.TabIndex = 1;
+            btnKhachhang.Text = "Khách hàng";
+            btnKhachhang.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnKhachhang.UseVisualStyleBackColor = false;
+            btnKhachhang.Click += btnKhachHang_Click;
             // 
             // panel2
             // 
@@ -111,14 +108,37 @@
             btnDuyetbai.Text = "Duyệt bài";
             btnDuyetbai.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnDuyetbai.UseVisualStyleBackColor = false;
+            btnDuyetbai.Click += btnDuyetbai_Click;
             // 
-            // panel3
+            // panel7
             // 
-            panel3.Controls.Add(btnHotro);
-            panel3.Location = new Point(3, 193);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(175, 32);
-            panel3.TabIndex = 2;
+            panel7.Controls.Add(btnDaduyet);
+            panel7.Location = new Point(3, 79);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(175, 32);
+            panel7.TabIndex = 3;
+            // 
+            // btnDaduyet
+            // 
+            btnDaduyet.BackColor = SystemColors.MenuHighlight;
+            btnDaduyet.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDaduyet.ForeColor = Color.White;
+            btnDaduyet.Location = new Point(-11, -8);
+            btnDaduyet.Name = "btnDaduyet";
+            btnDaduyet.Size = new Size(192, 51);
+            btnDaduyet.TabIndex = 1;
+            btnDaduyet.Text = "Đã duyệt";
+            btnDaduyet.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnDaduyet.UseVisualStyleBackColor = false;
+            btnDaduyet.Click += btnDaduyet_Click;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnHotro);
+            panel4.Location = new Point(3, 117);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(175, 32);
+            panel4.TabIndex = 2;
             // 
             // btnHotro
             // 
@@ -129,56 +149,37 @@
             btnHotro.Name = "btnHotro";
             btnHotro.Size = new Size(192, 51);
             btnHotro.TabIndex = 1;
-            btnHotro.Text = "Cần hỗ trợ";
+            btnHotro.Text = "Hỗ trợ";
             btnHotro.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnHotro.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(btnDahotro);
-            panel4.Location = new Point(3, 117);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(175, 32);
-            panel4.TabIndex = 2;
-            // 
-            // btnDahotro
-            // 
-            btnDahotro.BackColor = SystemColors.MenuHighlight;
-            btnDahotro.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDahotro.ForeColor = Color.White;
-            btnDahotro.Location = new Point(-11, -8);
-            btnDahotro.Name = "btnDahotro";
-            btnDahotro.Size = new Size(192, 51);
-            btnDahotro.TabIndex = 1;
-            btnDahotro.Text = "Đã hỗ trợ";
-            btnDahotro.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnDahotro.UseVisualStyleBackColor = false;
+            btnHotro.Click += btnHotro_Click;
             // 
             // panel5
             // 
-            panel5.Controls.Add(btnDoimk);
+            panel5.Controls.Add(btnDoimatkhau);
             panel5.Location = new Point(3, 155);
             panel5.Name = "panel5";
             panel5.Size = new Size(175, 32);
             panel5.TabIndex = 2;
             // 
-            // btnDoimk
+            // btnDoimatkhau
             // 
-            btnDoimk.BackColor = SystemColors.MenuHighlight;
-            btnDoimk.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoimk.ForeColor = Color.White;
-            btnDoimk.Location = new Point(-11, -8);
-            btnDoimk.Name = "btnDoimk";
-            btnDoimk.Size = new Size(192, 51);
-            btnDoimk.TabIndex = 1;
-            btnDoimk.Text = "Đổi mật khẩu";
-            btnDoimk.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnDoimk.UseVisualStyleBackColor = false;
+            btnDoimatkhau.BackColor = SystemColors.MenuHighlight;
+            btnDoimatkhau.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDoimatkhau.ForeColor = Color.White;
+            btnDoimatkhau.Location = new Point(-11, -8);
+            btnDoimatkhau.Name = "btnDoimatkhau";
+            btnDoimatkhau.Size = new Size(192, 51);
+            btnDoimatkhau.TabIndex = 1;
+            btnDoimatkhau.Text = "Đổi mật khẩu";
+            btnDoimatkhau.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnDoimatkhau.UseVisualStyleBackColor = false;
+            btnDoimatkhau.Click += btnDoimatkhau_Click;
             // 
             // panel6
             // 
             panel6.Controls.Add(btnDangxuat);
-            panel6.Location = new Point(3, 231);
+            panel6.Location = new Point(3, 193);
             panel6.Name = "panel6";
             panel6.Size = new Size(175, 32);
             panel6.TabIndex = 3;
@@ -196,41 +197,20 @@
             btnDangxuat.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnDangxuat.UseVisualStyleBackColor = false;
             // 
-            // panelKhachHang
+            // panelNhanVien
             // 
-            panelKhachHang.Dock = DockStyle.Fill;
-            panelKhachHang.Location = new Point(178, 0);
-            panelKhachHang.Name = "panelKhachHang";
-            panelKhachHang.Size = new Size(622, 415);
-            panelKhachHang.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(btnDanhsachbaidang);
-            panel7.Location = new Point(3, 79);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(175, 32);
-            panel7.TabIndex = 3;
-            // 
-            // btnDanhsachbaidang
-            // 
-            btnDanhsachbaidang.BackColor = SystemColors.MenuHighlight;
-            btnDanhsachbaidang.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDanhsachbaidang.ForeColor = Color.White;
-            btnDanhsachbaidang.Location = new Point(-11, -8);
-            btnDanhsachbaidang.Name = "btnDanhsachbaidang";
-            btnDanhsachbaidang.Size = new Size(192, 51);
-            btnDanhsachbaidang.TabIndex = 1;
-            btnDanhsachbaidang.Text = "Danh sách bài đăng";
-            btnDanhsachbaidang.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnDanhsachbaidang.UseVisualStyleBackColor = false;
+            panelNhanVien.Dock = DockStyle.Fill;
+            panelNhanVien.Location = new Point(178, 0);
+            panelNhanVien.Name = "panelNhanVien";
+            panelNhanVien.Size = new Size(722, 565);
+            panelNhanVien.TabIndex = 1;
             // 
             // FrmMainNhanVien
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(800, 415);
-            Controls.Add(panelKhachHang);
+            ClientSize = new Size(900, 565);
+            Controls.Add(panelNhanVien);
             Controls.Add(flowLayoutPanel1);
             Name = "FrmMainNhanVien";
             Padding = new Padding(0);
@@ -240,11 +220,10 @@
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -252,7 +231,7 @@
 
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel1;
-        private Button btnThongtin;
+        private Button btnKhachhang;
         private Panel panel2;
         private Button btnDuyetbai;
         private Panel panel3;
@@ -260,11 +239,11 @@
         private Panel panel4;
         private Button btnDahotro;
         private Panel panel5;
-        private Button btnDoimk;
+        private Button btnDoimatkhau;
         private Panel panel6;
         private Button btnDangxuat;
-        private Panel panelKhachHang;
+        private Panel panelNhanVien;
         private Panel panel7;
-        private Button btnDanhsachbaidang;
+        private Button btnDaduyet;
     }
 }

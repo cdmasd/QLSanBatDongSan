@@ -103,7 +103,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(372, 86);
+            label6.Location = new Point(429, 85);
             label6.Name = "label6";
             label6.Size = new Size(75, 19);
             label6.TabIndex = 5;
@@ -183,7 +183,7 @@
             // txtHinhanh
             // 
             txtHinhanh.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtHinhanh.Location = new Point(376, 112);
+            txtHinhanh.Location = new Point(433, 111);
             txtHinhanh.Margin = new Padding(4, 5, 4, 5);
             txtHinhanh.MinimumSize = new Size(1, 16);
             txtHinhanh.Name = "txtHinhanh";
@@ -197,7 +197,7 @@
             // btnUpload
             // 
             btnUpload.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpload.Location = new Point(347, 153);
+            btnUpload.Location = new Point(404, 152);
             btnUpload.MinimumSize = new Size(1, 1);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(100, 35);
@@ -208,7 +208,7 @@
             // btnInsert
             // 
             btnInsert.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnInsert.Location = new Point(498, 153);
+            btnInsert.Location = new Point(555, 152);
             btnInsert.MinimumSize = new Size(1, 1);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(100, 35);
@@ -219,7 +219,7 @@
             // uiLine1
             // 
             uiLine1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            uiLine1.Location = new Point(144, 204);
+            uiLine1.Location = new Point(170, 204);
             uiLine1.MinimumSize = new Size(1, 1);
             uiLine1.Name = "uiLine1";
             uiLine1.Size = new Size(360, 29);
@@ -229,9 +229,9 @@
             // picHinhAnh
             // 
             picHinhAnh.BorderStyle = BorderStyle.FixedSingle;
-            picHinhAnh.Location = new Point(39, 239);
+            picHinhAnh.Location = new Point(12, 239);
             picHinhAnh.Name = "picHinhAnh";
-            picHinhAnh.Size = new Size(540, 164);
+            picHinhAnh.Size = new Size(698, 314);
             picHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
             picHinhAnh.TabIndex = 15;
             picHinhAnh.TabStop = false;
@@ -239,7 +239,7 @@
             // txtDiachi
             // 
             txtDiachi.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDiachi.Location = new Point(376, 52);
+            txtDiachi.Location = new Point(433, 51);
             txtDiachi.Margin = new Padding(4, 5, 4, 5);
             txtDiachi.MinimumSize = new Size(1, 16);
             txtDiachi.Name = "txtDiachi";
@@ -254,7 +254,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(372, 26);
+            label7.Location = new Point(429, 25);
             label7.Name = "label7";
             label7.Size = new Size(149, 19);
             label7.TabIndex = 12;
@@ -264,7 +264,7 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(622, 415);
+            ClientSize = new Size(722, 565);
             Controls.Add(txtDiachi);
             Controls.Add(label7);
             Controls.Add(picHinhAnh);

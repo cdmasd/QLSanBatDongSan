@@ -48,3 +48,8 @@ C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Kh
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.KhachHang.FrmDoiMatKhau.resources
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Guest.FrmMainGuest.resources
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmMainNhanVien.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmQLKhachHang.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDuyetbai.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDaduyet.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDoimatkhau.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmHotro.resources
