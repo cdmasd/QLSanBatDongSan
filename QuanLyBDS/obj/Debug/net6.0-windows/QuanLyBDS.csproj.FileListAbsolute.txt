@@ -53,3 +53,11 @@ C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Nh
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDaduyet.resources
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDoimatkhau.resources
 C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmHotro.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmMainAdmin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmQLNhanVien.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmDaduyet_Admin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmDoimatkhau_Admin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmDuyetbai_Admin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmHotro_Admin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmQLKhachHang_Admin.resources
+C:\Users\Admin\Desktop\QuanLyBDS\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmThongKe.resources

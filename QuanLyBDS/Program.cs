@@ -1,3 +1,4 @@
+using QuanLyBDS.Admin;
 using QuanLyBDS.Guest;
 using QuanLyBDS.KhachHang;
 using QuanLyBDS.NhanVien;
@@ -15,7 +16,7 @@ namespace QuanLyBDS
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmMainNhanVien());
+            Application.Run(new FrmMainGuest());
         }
     }
 }
