@@ -17,5 +17,15 @@ namespace QuanLyBDS.Guest
         {
             InitializeComponent();
         }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXemanh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

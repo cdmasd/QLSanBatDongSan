@@ -13,11 +13,21 @@ namespace QuanLyBDS
         BUS_QuanLyBDS.DangNhap dn = new BUS_QuanLyBDS.DangNhap();
         public string vaitro { get; set; }
         string num;
+        string newpass;
         public FrmDangNhap()
         {
             InitializeComponent();
             LoginView();
             settingsUI();
+        }
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.isSave)
+            {
+                txtEmail.Text = Properties.Settings.Default.email;
+                txtPassword.Text = Properties.Settings.Default.matkhau;
+                chkRemember.Checked = true;
+            }
         }
 
         #region Giao diện
@@ -208,9 +218,15 @@ namespace QuanLyBDS
                 {
                     Properties.Settings.Default.email = txtEmail.Text;
                     Properties.Settings.Default.matkhau = txtPassword.Text;
-
+                    Properties.Settings.Default.Save();
                 }
-                Properties.Settings.Default.Save();
+                else
+                {
+                    Properties.Settings.Default.email = "";
+                    Properties.Settings.Default.matkhau = "";
+                    Properties.Settings.Default.Save();
+                }
+
                 this.Close();
             }
             else
@@ -270,7 +286,50 @@ namespace QuanLyBDS
         }
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
+            newpass = dn.RandomString();
+            if(txtEmail.Text == "")
+            {
+                ShowErrorNotifier("Vui lòng nhập email lấy lại mật khẩu");
+                return;
+            }
+            if(dn.changePass(txtEmail.Text, newpass))
+            {
+                try
+                {
+                    // Khởi tạo đối tượng MailMessage để tạo email.
+                    MailMessage Msg = new MailMessage();
 
+                    // Đặt người gửi email.
+                    Msg.From = new MailAddress("tienphanps28044@gmail.com");
+
+                    // Đặt người nhận email, thường là địa chỉ email của người dùng muốn khôi phục mật khẩu.
+                    Msg.To.Add(txtEmail.Text.Trim());
+
+                    // Đặt tiêu đề của email.
+                    Msg.Subject = "Lấy lại mật khẩu";
+
+                    // Đặt nội dung (body) của email và chèn mật khẩu mới vào nội dung email.
+                    Msg.Body = $"Mật khẩu mới của bạn là : {newpass}";
+
+                    using (SmtpClient client = new SmtpClient())
+                    {
+                        client.EnableSsl = true;
+                        client.UseDefaultCredentials = false;
+                        client.Credentials = new NetworkCredential("tienphanps28044@gmail.com", "oxap pttt nkmb yvuu");
+                        client.Host = "smtp.gmail.com";
+                        client.Port = 587;
+                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                        client.Send(Msg);
+                    }
+                    UIMessageDialog.ShowSuccessDialog(this, $"Đã gửi mật khẩu mới vào địa chỉ email : {txtEmail.Text}");
+                }
+                catch (Exception ex)
+                {
+                    // Nếu lỗi là do lỗi khác, hãy hiển thị thông báo lỗi.
+                    UIMessageDialog.ShowErrorDialog(this, ex.Message);
+                }
+            }
         }
 
         #endregion
