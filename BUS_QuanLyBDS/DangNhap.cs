@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using MongoDB.Bson;
 using System.Net.Mail;
 using System.Net;
+using PasswordGenerator;
 
 namespace BUS_QuanLyBDS
 {
@@ -25,6 +26,10 @@ namespace BUS_QuanLyBDS
         {
             return dn.insertKhachhang(email, name, phone, encrytion(password));
         }
+        public bool changePass(string email, string password)
+        {
+            return dn.changePass(email, encrytion(password));
+        }
         #region Xác thực
         // Mã hoá
         public string encrytion(string password)
@@ -39,6 +44,13 @@ namespace BUS_QuanLyBDS
                 builder.Append(item.ToString());
             }
             return builder.ToString();
+        }
+        // Tạo chuỗi ngẫu nhiên
+        public string RandomString()
+        {
+            var pass = new Password(8); // khởi tạo mật khẩu gồm 8 kí tự
+            var passGenerate = pass.Next();
+            return passGenerate;
         }
         #endregion
     }

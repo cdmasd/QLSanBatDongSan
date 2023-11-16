@@ -449,6 +449,7 @@
             ShowTitle = false;
             Text = "FrmDangNhap";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
+            Load += FrmDangNhap_Load;
             UIPanel.ResumeLayout(false);
             UIPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picBackground).EndInit();
