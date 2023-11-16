@@ -1,14 +1,38 @@
 ﻿using Sunny.UI;
+using System.Net.Mail;
+using System.Net;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace QuanLyBDS
 {
     public partial class FrmDangNhap : UIForm
     {
+        BUS_QuanLyBDS.DangNhap dn = new BUS_QuanLyBDS.DangNhap();
+        public string vaitro { get; set; }
+        string num;
         public FrmDangNhap()
         {
             InitializeComponent();
             LoginView();
+            settingsUI();
         }
+
+        #region Giao diện
+        public void settingsUI()
+        {
+            UIStyles.DPIScale = true;
+            UIStyles.GlobalFont = true;
+            UIStyles.GlobalFontName = "Tahoma";
+            UIStyles.SetDPIScale();
+            UILocalize.OK = "Ok";
+            UILocalize.Cancel = "Cancel";
+            UILocalize.SuccessTitle = "Success";
+            UILocalize.ErrorTitle = "Error";
+        }
+
         void ResetValues()
         {
             txtEmailre.Text = null;
@@ -116,11 +140,168 @@ namespace QuanLyBDS
         {
             LoginView();
         }
-
+        #endregion
+        #region chức năng
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(txtEmailre.Text) || string.IsNullOrEmpty(txtHoTenre.Text)
+                || string.IsNullOrWhiteSpace(txtSoDTre.Text) || string.IsNullOrEmpty(txtPasswordre.Text))
+            {
+                ShowErrorNotifier("Các trường không được để rỗng");
+                txtEmailre.Focus();
+                return;
+            }
+            if (!isEmail(txtEmailre.Text.Trim()))
+            {
+                ShowErrorNotifier("Sai định dạng email");
+                txtEmailre.Focus();
+                return;
+            }
+            if (!isPhone(txtSoDTre.Text.Trim()))
+            {
+                ShowErrorNotifier("Sai định dạng số điện thoại");
+                txtSoDTre.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(txtXacthuc.Text))
+            {
+                ShowErrorNotifier("Vui lòng lấy mã xác thực và kiểm tra email");
+                txtXacthuc.Focus();
+                return;
+            }
+            if (txtXacthuc.Text != num)
+            {
+                ShowErrorNotifier("Mã xác thực không chính xác");
+                txtXacthuc.Focus();
+                return;
+            }
+            if (dn.insertKhachhang(txtEmailre.Text, txtHoTenre.Text, txtSoDTre.Text, txtPasswordre.Text))
+            {
+                ShowSuccessTip("Đăng kí thành công");
+                // Lưu thông tin tài khoản
+                btnDangNhapre_Click(sender, e);
+            }
+            else
+            {
+                UIMessageDialog.ShowErrorDialog(this, "Dăng kí không thành công, kiểm tra lại email hoặc mật khẩu");
+            }
             ResetValues();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                ShowErrorNotifier("Các trường không được rỗng");
+                return;
+            }
+            if (dn.checkAccount(txtEmail.Text, txtPassword.Text))
+            {
+                UIMessageDialog.ShowSuccessDialog(this, "Đăng nhập thành công");
+                // Gửi kết quả đăng nhập cho frmMain
+                FrmMain.mail = txtEmail.Text;
+                FrmMain.session = 1;
+                vaitro = dn.getRole(txtEmail.Text);
+                // Lưu thông tin tài khoản
+                Properties.Settings.Default.isSave = chkRemember.Checked;
+                if (chkRemember.Checked)
+                {
+                    Properties.Settings.Default.email = txtEmail.Text;
+                    Properties.Settings.Default.matkhau = txtPassword.Text;
+
+                }
+                Properties.Settings.Default.Save();
+                this.Close();
+            }
+            else
+            {
+                UIMessageDialog.ShowSuccessDialog(this, "Đăng nhập không thành công, kiểm tra lại email hoặc mật khẩu");
+                txtEmail.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Focus();
+            }
+        }
+
+        private void btnKhach_Click(object sender, EventArgs e)
+        {
+            FrmMain.mail = "Sàn bất động sản";
+            FrmMain.session = 1;
+            vaitro = "guest";
+            this.Close();
+        }
+        private void btnLayma_Click(object sender, EventArgs e)
+        {
+            num = generateNum();
+            try
+            {
+                // Khởi tạo đối tượng MailMessage để tạo email.
+                MailMessage Msg = new MailMessage();
+
+                // Đặt người gửi email.
+                Msg.From = new MailAddress("tienphanps28044@gmail.com");
+
+                // Đặt người nhận email, thường là địa chỉ email của người dùng muốn khôi phục mật khẩu.
+                Msg.To.Add(txtEmailre.Text.Trim());
+
+                // Đặt tiêu đề của email.
+                Msg.Subject = "Mã xác thực phần mềm quản lý bất động sản";
+
+                // Đặt nội dung (body) của email và chèn mật khẩu mới vào nội dung email.
+                Msg.Body = $"Mã xác thực của bạn là : {num}";
+
+                using (SmtpClient client = new SmtpClient())
+                {
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential("tienphanps28044@gmail.com", "oxap pttt nkmb yvuu");
+                    client.Host = "smtp.gmail.com";
+                    client.Port = 587;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                    client.Send(Msg);
+                }
+                UIMessageDialog.ShowSuccessDialog(this, $"Đã gửi mã xác thực vào địa chỉ email : {txtEmailre.Text}");
+            }
+            catch (Exception ex)
+            {
+                // Nếu lỗi là do lỗi khác, hãy hiển thị thông báo lỗi.
+                UIMessageDialog.ShowErrorDialog(this, ex.Message);
+            }
+        }
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+        #region Xác thực
+        public static bool isEmail(string inputEmail)
+        {
+            inputEmail = inputEmail ?? string.Empty;
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                  @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                  @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(inputEmail))
+                return (true);
+            else
+                return (false);
+        }
+        public static bool isPhone(string phone)
+        {
+            string strRegex = @"^0\d{9}$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone))
+                return (true);
+            else
+                return (false);
+        }
+        public string generateNum()
+        {
+            Random rd = new Random();
+            return rd.Next(100000, 999999).ToString();
+        }
+
+        #endregion
     }
 }

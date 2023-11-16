@@ -31,8 +31,10 @@
             UIPanel = new Sunny.UI.UIPanel();
             picBackground = new PictureBox();
             PanelDangNhap = new Sunny.UI.UIPanel();
+            btnTaoTaiKhoan = new Sunny.UI.UILinkLabel();
             label3 = new Label();
             btnLayma = new Sunny.UI.UIButton();
+            txtSoDTre = new Sunny.UI.UITextBox();
             txtXacthuc = new Sunny.UI.UITextBox();
             btnKhach = new Sunny.UI.UIButton();
             btnDangNhapre = new Sunny.UI.UILinkLabel();
@@ -40,14 +42,12 @@
             btnRegister = new Sunny.UI.UIButton();
             txtPasswordre = new Sunny.UI.UITextBox();
             lb5re = new Label();
-            txtSoDTre = new Sunny.UI.UITextBox();
             lb4re = new Label();
             txtHoTenre = new Sunny.UI.UITextBox();
             lb3re = new Label();
             txtEmailre = new Sunny.UI.UITextBox();
             lb2re = new Label();
             lb1re = new Sunny.UI.UILabel();
-            btnTaoTaiKhoan = new Sunny.UI.UILinkLabel();
             uiLabel2 = new Sunny.UI.UILabel();
             btnLogin = new Sunny.UI.UIButton();
             btnForgotPassword = new Sunny.UI.UILinkLabel();
@@ -90,8 +90,10 @@
             // 
             // PanelDangNhap
             // 
+            PanelDangNhap.Controls.Add(btnTaoTaiKhoan);
             PanelDangNhap.Controls.Add(label3);
             PanelDangNhap.Controls.Add(btnLayma);
+            PanelDangNhap.Controls.Add(txtSoDTre);
             PanelDangNhap.Controls.Add(txtXacthuc);
             PanelDangNhap.Controls.Add(btnKhach);
             PanelDangNhap.Controls.Add(btnDangNhapre);
@@ -99,14 +101,12 @@
             PanelDangNhap.Controls.Add(btnRegister);
             PanelDangNhap.Controls.Add(txtPasswordre);
             PanelDangNhap.Controls.Add(lb5re);
-            PanelDangNhap.Controls.Add(txtSoDTre);
             PanelDangNhap.Controls.Add(lb4re);
             PanelDangNhap.Controls.Add(txtHoTenre);
             PanelDangNhap.Controls.Add(lb3re);
             PanelDangNhap.Controls.Add(txtEmailre);
             PanelDangNhap.Controls.Add(lb2re);
             PanelDangNhap.Controls.Add(lb1re);
-            PanelDangNhap.Controls.Add(btnTaoTaiKhoan);
             PanelDangNhap.Controls.Add(uiLabel2);
             PanelDangNhap.Controls.Add(btnLogin);
             PanelDangNhap.Controls.Add(btnForgotPassword);
@@ -128,6 +128,20 @@
             PanelDangNhap.Text = null;
             PanelDangNhap.TextAlignment = ContentAlignment.MiddleCenter;
             // 
+            // btnTaoTaiKhoan
+            // 
+            btnTaoTaiKhoan.ActiveLinkColor = Color.FromArgb(220, 155, 40);
+            btnTaoTaiKhoan.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTaoTaiKhoan.LinkBehavior = LinkBehavior.AlwaysUnderline;
+            btnTaoTaiKhoan.Location = new Point(239, 396);
+            btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
+            btnTaoTaiKhoan.Size = new Size(133, 26);
+            btnTaoTaiKhoan.TabIndex = 33;
+            btnTaoTaiKhoan.TabStop = true;
+            btnTaoTaiKhoan.Text = "Tạo tài khoản";
+            btnTaoTaiKhoan.VisitedLinkColor = Color.FromArgb(230, 80, 80);
+            btnTaoTaiKhoan.Click += btnTaoTaiKhoan_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -141,18 +155,33 @@
             // btnLayma
             // 
             btnLayma.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLayma.Location = new Point(260, 367);
+            btnLayma.Location = new Point(273, 367);
             btnLayma.MinimumSize = new Size(1, 1);
             btnLayma.Name = "btnLayma";
-            btnLayma.Size = new Size(100, 29);
+            btnLayma.Size = new Size(87, 29);
             btnLayma.TabIndex = 49;
             btnLayma.Text = "Lấy mã";
             btnLayma.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLayma.Click += btnLayma_Click;
+            // 
+            // txtSoDTre
+            // 
+            txtSoDTre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoDTre.Location = new Point(66, 247);
+            txtSoDTre.Margin = new Padding(4, 5, 4, 5);
+            txtSoDTre.MinimumSize = new Size(1, 16);
+            txtSoDTre.Name = "txtSoDTre";
+            txtSoDTre.Padding = new Padding(5);
+            txtSoDTre.ShowText = false;
+            txtSoDTre.Size = new Size(295, 29);
+            txtSoDTre.TabIndex = 38;
+            txtSoDTre.TextAlignment = ContentAlignment.MiddleLeft;
+            txtSoDTre.Watermark = "";
             // 
             // txtXacthuc
             // 
             txtXacthuc.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtXacthuc.Location = new Point(72, 367);
+            txtXacthuc.Location = new Point(66, 367);
             txtXacthuc.Margin = new Padding(4, 5, 4, 5);
             txtXacthuc.MinimumSize = new Size(1, 16);
             txtXacthuc.Name = "txtXacthuc";
@@ -173,6 +202,7 @@
             btnKhach.TabIndex = 46;
             btnKhach.Text = "Khách truy cập";
             btnKhach.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKhach.Click += btnKhach_Click;
             // 
             // btnDangNhapre
             // 
@@ -234,20 +264,6 @@
             lb5re.Size = new Size(77, 19);
             lb5re.TabIndex = 41;
             lb5re.Text = "Mật khẩu :";
-            // 
-            // txtSoDTre
-            // 
-            txtSoDTre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSoDTre.Location = new Point(66, 247);
-            txtSoDTre.Margin = new Padding(4, 5, 4, 5);
-            txtSoDTre.MinimumSize = new Size(1, 16);
-            txtSoDTre.Name = "txtSoDTre";
-            txtSoDTre.Padding = new Padding(5);
-            txtSoDTre.ShowText = false;
-            txtSoDTre.Size = new Size(295, 29);
-            txtSoDTre.TabIndex = 38;
-            txtSoDTre.TextAlignment = ContentAlignment.MiddleLeft;
-            txtSoDTre.Watermark = "";
             // 
             // lb4re
             // 
@@ -317,20 +333,6 @@
             lb1re.Text = "Register";
             lb1re.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnTaoTaiKhoan
-            // 
-            btnTaoTaiKhoan.ActiveLinkColor = Color.FromArgb(220, 155, 40);
-            btnTaoTaiKhoan.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTaoTaiKhoan.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            btnTaoTaiKhoan.Location = new Point(239, 396);
-            btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
-            btnTaoTaiKhoan.Size = new Size(96, 26);
-            btnTaoTaiKhoan.TabIndex = 33;
-            btnTaoTaiKhoan.TabStop = true;
-            btnTaoTaiKhoan.Text = "Tạo tài khoản";
-            btnTaoTaiKhoan.VisitedLinkColor = Color.FromArgb(230, 80, 80);
-            btnTaoTaiKhoan.Click += btnTaoTaiKhoan_Click;
-            // 
             // uiLabel2
             // 
             uiLabel2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -351,6 +353,7 @@
             btnLogin.TabIndex = 31;
             btnLogin.Text = "Đăng nhập";
             btnLogin.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnForgotPassword
             // 
@@ -364,6 +367,7 @@
             btnForgotPassword.TabStop = true;
             btnForgotPassword.Text = "Quên mật khẩu ?";
             btnForgotPassword.VisitedLinkColor = Color.FromArgb(230, 80, 80);
+            btnForgotPassword.Click += btnForgotPassword_Click;
             // 
             // chkRemember
             // 
@@ -371,7 +375,7 @@
             chkRemember.Location = new Point(66, 288);
             chkRemember.MinimumSize = new Size(1, 1);
             chkRemember.Name = "chkRemember";
-            chkRemember.Size = new Size(150, 29);
+            chkRemember.Size = new Size(167, 29);
             chkRemember.TabIndex = 29;
             chkRemember.Text = "Ghi nhớ tài khoản";
             // 
@@ -383,6 +387,7 @@
             txtPassword.MinimumSize = new Size(1, 16);
             txtPassword.Name = "txtPassword";
             txtPassword.Padding = new Padding(5);
+            txtPassword.PasswordChar = '-';
             txtPassword.ShowText = false;
             txtPassword.Size = new Size(295, 29);
             txtPassword.TabIndex = 28;
@@ -424,9 +429,9 @@
             // uiLabel1
             // 
             uiLabel1.Font = new Font("Roboto Condensed", 23F, FontStyle.Bold, GraphicsUnit.Point);
-            uiLabel1.Location = new Point(108, 48);
+            uiLabel1.Location = new Point(84, 27);
             uiLabel1.Name = "uiLabel1";
-            uiLabel1.Size = new Size(227, 33);
+            uiLabel1.Size = new Size(276, 54);
             uiLabel1.TabIndex = 24;
             uiLabel1.Text = "Login To System";
             uiLabel1.TextAlign = ContentAlignment.MiddleCenter;

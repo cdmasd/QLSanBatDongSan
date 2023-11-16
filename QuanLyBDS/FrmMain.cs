@@ -1,18 +1,79 @@
-﻿using Sunny.UI;
+﻿using QuanLyBDS.Admin;
+using QuanLyBDS.Guest;
+using QuanLyBDS.KhachHang;
+using QuanLyBDS.NhanVien;
+using Sunny.UI;
 
 namespace QuanLyBDS
 {
     public partial class FrmMain : UIForm
     {
-        public static bool session = false;
-        public static string role;
+        public static int session = 0; // kiểm tra đăng nhập chưa
+        public static string mail;
+        FrmDangNhap dn = new FrmDangNhap();
+        FrmMainAdmin ad = new FrmMainAdmin();
+        FrmMainKhachHang kh = new FrmMainKhachHang();
+        FrmMainNhanVien nv = new FrmMainNhanVien();
+        FrmMainGuest guest = new FrmMainGuest();
         public FrmMain()
         {
             InitializeComponent();
-            FrmDangNhap login = new FrmDangNhap();
-            login.TopLevel = false;
-            PanelMain.Controls.Add(login);
-            login.Show();
+            this.IsMdiContainer = true;
+            DangNhap();
+        }
+        void DangNhap()
+        {
+            if (!CheckExistForm("FrmDangNhap"))
+            {
+                dn.TopLevel = false;
+                PanelMain.Controls.Add(dn);
+                dn.Show();
+                dn.FormClosed += new FormClosedEventHandler(FrmDangNhap_FormClosed);
+            }
+            else
+            {
+                ActiveChildForm("FrmDangNhap");
+            }
+        }
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            OpenVaitro();
+        }
+        public void OpenVaitro()
+        {
+            if (session == 1)
+            {
+                this.Text = mail;
+                if (dn.vaitro == "admin")
+                {
+                    ad.TopLevel = false;
+                    PanelMain.Controls.Add(ad);
+                    ad.Show();
+                }
+                else if (dn.vaitro == "khachhang")
+                {
+                    kh.TopLevel = false;
+                    PanelMain.Controls.Add(kh);
+                    kh.Show();
+                }
+                else if (dn.vaitro == "nhanvien")
+                {
+                    nv.TopLevel = false;
+                    PanelMain.Controls.Add(nv);
+                    nv.Show();
+                }
+                else
+                {
+                    guest.TopLevel = false;
+                    PanelMain.Controls.Add(guest);
+                    guest.Show();
+                }
+            }
+        }
+        void FrmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Refresh();
+            FrmMain_Load(sender, e);
         }
         private bool CheckExistForm(string name)
         {
