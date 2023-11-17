@@ -196,6 +196,7 @@
             btnDangxuat.Text = "Đăng xuất";
             btnDangxuat.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnDangxuat.UseVisualStyleBackColor = false;
+            btnDangxuat.Click += btnDangxuat_Click;
             // 
             // panelNhanVien
             // 

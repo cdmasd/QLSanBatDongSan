@@ -49,6 +49,7 @@ namespace QuanLyBDS
             txtHoTenre.Text = null;
             txtSoDTre.Text = null;
             txtPasswordre.Text = null;
+            txtXacthuc.Text = null;
         }
         void LoginView()
         {
@@ -287,12 +288,12 @@ namespace QuanLyBDS
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             newpass = dn.RandomString();
-            if(txtEmail.Text == "")
+            if (txtEmail.Text == "")
             {
                 ShowErrorNotifier("Vui lòng nhập email lấy lại mật khẩu");
                 return;
             }
-            if(dn.changePass(txtEmail.Text, newpass))
+            if (dn.changePass(txtEmail.Text, newpass))
             {
                 try
                 {
@@ -360,7 +361,13 @@ namespace QuanLyBDS
             Random rd = new Random();
             return rd.Next(100000, 999999).ToString();
         }
-
+        private void txtSoDTre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         #endregion
     }
 }

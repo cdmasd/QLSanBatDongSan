@@ -177,6 +177,7 @@
             txtSoDTre.TabIndex = 38;
             txtSoDTre.TextAlignment = ContentAlignment.MiddleLeft;
             txtSoDTre.Watermark = "";
+            txtSoDTre.KeyPress += txtSoDTre_KeyPress;
             // 
             // txtXacthuc
             // 
