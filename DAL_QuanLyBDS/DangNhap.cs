@@ -47,6 +47,14 @@ namespace DAL_QuanLyBDS
         {
             try
             {
+                if (!checkEmail(email))
+                {
+                    return false;
+                }
+                if (!checkPhone(phone))
+                {
+                    return false;
+                }
                 khachhang.InsertOne(new BsonDocument
                 {
                     {"Email",email},
@@ -73,5 +81,27 @@ namespace DAL_QuanLyBDS
                 return false;
             }
         }
+        #region check existed
+        public bool checkEmail(string email)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("Email", email);
+            var result =  khachhang.Find(filter).ToList();
+            if(result.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool checkPhone(string phone)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("Sodienthoai", phone);
+            var result = khachhang.Find(filter).ToList();
+            if (result.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
     }
 }
