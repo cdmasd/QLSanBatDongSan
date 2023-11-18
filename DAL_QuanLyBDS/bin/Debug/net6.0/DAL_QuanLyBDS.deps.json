@@ -165,6 +165,9 @@
         }
       },
       "DTO_QuanLyBDS/1.0.0": {
+        "dependencies": {
+          "MongoDB.Bson": "2.22.0"
+        },
         "runtime": {
           "DTO_QuanLyBDS.dll": {}
         }

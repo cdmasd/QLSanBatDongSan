@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sh+bhw1AocAQrbOJuovR2+k5WTPBOtMSyJzA/wWLTNP0Y7AY1Uwyu6Okn283E9vnnsxgo9VQajuN1Nv0ZJJHVg==",
+  "dgSpecHash": "6uvLMYTaAirf78r47HKBcMRvpnFBmFIbWiLrJGbhsrCLSgn6B0nBgjQMBDyppTSjnNKLg9qwq4Aa0zZDg9NyXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mongodb.bson\\2.22.0\\mongodb.bson.2.22.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
