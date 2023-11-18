@@ -42,16 +42,13 @@ namespace DAL_QuanLyBDS.Admin
             foreach (var nhanVien in listNhanVien)
             {
                 DataRow row = dt.NewRow();
-                row["Mã Nhân Viên"] = nhanVien._id;
-                row["Email"] = nhanVien.Email;
-                row["Tên"] = nhanVien.Name;
-                row["Số ĐT"] = nhanVien.SoDienThoai;
-                row["Địa Chỉ"] = nhanVien.DiaChi;
-                row["Vai Trò"] = nhanVien.VaiTro;
-                row["Trạng Thái"] = nhanVien.TrangThai;
-                row["Ngày Bắt Đầu"] = nhanVien.NgayBatDau.ToString("dd/MM/yyyy");
+                foreach (var prop in typeof(NhanVien).GetProperties())
+                {
+                    row[prop.Name] = prop.GetValue(nhanVien);
+                }
                 dt.Rows.Add(row);
             }
+
             return dt;
         }
     }
