@@ -25,6 +25,10 @@ namespace BUS_QuanLyBDS
         {
             return dn.insertKhachhang(email, name, phone, encrytion(password));
         }
+        public bool changePass(string email, string password)
+        {
+            return dn.changePass(email, encrytion(password));
+        }
         #region Xác thực
         // Mã hoá
         public string encrytion(string password)

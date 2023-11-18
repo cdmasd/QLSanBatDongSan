@@ -60,5 +60,19 @@ namespace DAL_QuanLyBDS
                 return false;
             }
         }
+        public bool changePass(string email, string password)
+        {
+            try
+            {
+                var filter = Builders<BsonDocument>.Filter.Eq("Email", email);
+                var update = Builders<BsonDocument>.Update.Set("Matkhau", password);
+                taikhoan.UpdateOne(filter, update);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

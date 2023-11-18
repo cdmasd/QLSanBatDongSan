@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\New folder (2)\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {
+    "C:\\Users\\Admin\\Desktop\\New folder (2)\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\New folder (2)\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
         "projectName": "DTO_QuanLyBDS",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\QuanLyBDS\\DTO_QuanLyBDS\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\New folder (2)\\QLSanBatDongSan\\DTO_QuanLyBDS\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.22.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
