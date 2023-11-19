@@ -82,6 +82,22 @@ namespace DAL_QuanLyBDS
                 return false;
             }
         }
+        public bool DeletebaiDang (string tieude)
+        {
+            try
+            {
+                var filterBuilder = Builders<BsonDocument>.Filter;
+                var filter = filterBuilder.Eq("TieuDe", tieude);
+                var reusult = khachhangdangtin.DeleteOne(filter);
+                return reusult.DeletedCount > 0; 
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi xóa bài đăng: {ex.Message}");
+                return false;
+            }
+        }
 
 
 

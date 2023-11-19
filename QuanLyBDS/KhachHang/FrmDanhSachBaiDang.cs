@@ -24,6 +24,13 @@ namespace QuanLyBDS.KhachHang
         {
             InitializeComponent();
             Loainha();
+            if (dtView == null)
+            {
+                dtView = new UIDataGridView();
+                this.Controls.Add(dtView);
+            }
+            dtView.CellClick += dtView_CellClick;
+
             // Load dữ liệu từ MongoDB và hiển thị trên DataGridView
             LoadDataKhachHang();
 
@@ -80,6 +87,32 @@ namespace QuanLyBDS.KhachHang
         {
 
         }
+        private void dtView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dtView.Rows[e.RowIndex];
+
+                // Lấy dữ liệu từ các ô của dòng được chọn
+                string tieuDe = selectedRow.Cells["TieuDe"].Value.ToString();
+                string loaiNha = selectedRow.Cells["LoaiNha"].Value.ToString();
+                string dienTich = selectedRow.Cells["DienTich"].Value.ToString();
+                string soPhong = selectedRow.Cells["SoPhong"].Value.ToString();
+                string gia = selectedRow.Cells["Gia"].Value.ToString();
+                string diaChi = selectedRow.Cells["DiaChi"].Value.ToString();
+                string hinhAnh = selectedRow.Cells["HinhAnh"].Value.ToString();
+
+                // Hiển thị dữ liệu lên các controls
+                txtTieude.Text = tieuDe;
+                cbLoainha.Text = loaiNha;
+                txtDientich.Text = dienTich;
+                txtSophong.Text = soPhong;
+                txtGia.Text = gia;
+                txtDiachi.Text = diaChi;
+                txtHinhanh.Text = hinhAnh;
+            }
+        }
+
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
@@ -98,40 +131,52 @@ namespace QuanLyBDS.KhachHang
             }
 
         }
-        private void LoadDataKhachHang()
-        {
-            try
+            private void LoadDataKhachHang()
             {
-                List<BsonDocument> dataBaiDang = kh.GetDataKhachHang();
-
-                if (dataBaiDang != null && dataBaiDang.Count > 0)
+                try
                 {
-                    if (dtView == null)
+                    List<BsonDocument> dataBaiDang = kh.GetDataKhachHang();
+
+                    if (dataBaiDang != null && dataBaiDang.Count > 0)
                     {
-                        dtView = new UIDataGridView();
-                        this.Controls.Add(dtView);
-                    }
+                        if (dtView == null)
+                        {
+                            dtView = new UIDataGridView();
+                            this.Controls.Add(dtView);
+                        }
 
-                    dtView.DataSource = dataBaiDang;
-                    dtView.Columns["TieuDe"].HeaderText = "Tiêu đề";
-                    dtView.Columns["LoaiNha"].HeaderText = "Loại nhà";
-                    dtView.Columns["DienTich"].HeaderText = "Diện tích";
-                    dtView.Columns["SoPhong"].HeaderText = "Số phòng";
-                    dtView.Columns["Gia"].HeaderText = "Giá";
-                    dtView.Columns["DiaChi"].HeaderText = "Địa chỉ";
-                    dtView.Columns["HinhAnh"].HeaderText = "Hình ảnh";
-                    dtView.Columns["Duyet"].HeaderText = "Trạng thái";
+                        // Xóa các cột hiện tại trong DataGridView
+                        dtView.Columns.Clear();
+
+                        // Tạo các cột mới cho DataGridView
+                        foreach (var key in dataBaiDang[0].Names)
+                        {
+                            dtView.Columns.Add(key, key);
+                        }
+
+                        // Đổ dữ liệu vào từng dòng của DataGridView
+                        foreach (var doc in dataBaiDang)
+                        {
+                            List<object> values = new List<object>();
+                            foreach (var key in doc.Names)
+                            {
+                                values.Add(doc[key]);
+                            }
+                            dtView.Rows.Add(values.ToArray());
+                        }
+
+                        dtView.Refresh();  // Cập nhật lại DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có dữ liệu để hiển thị.");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Không có dữ liệu để hiển thị.");
+                    MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
-            }
-        }
 
 
         private void FrmDanhSachBaiDang_Load(object sender, EventArgs e)

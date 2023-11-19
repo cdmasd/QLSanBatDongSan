@@ -21,9 +21,18 @@ namespace BUS_QuanLyBDS
                 return false;
             }
         }
-        public List<BsonDocument>GetDataKhachHang()
+        public List<BsonDocument> GetDataKhachHang()
         {
-            return kh.getBaiDang(); 
+            try
+            {
+                // Gọi phương thức từ DAL để lấy danh sách bài đăng
+                return kh.getBaiDang();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi lấy dữ liệu: {ex.Message}");
+                return null;
+            }
         }
         public bool UpdateBaiDang(string tieuDe, string loaiNha, string dienTich, string soPhong, string gia, string diaChi, string hinhAnh)
         {
@@ -37,6 +46,10 @@ namespace BUS_QuanLyBDS
                 Console.WriteLine($"Lỗi khi cập nhật bài đăng: {ex.Message}");
                 return false;
             }
+        }
+        public bool DetelebaiDang(string tieude)
+        {
+            return kh.DeletebaiDang(tieude); 
         }
     }
 }

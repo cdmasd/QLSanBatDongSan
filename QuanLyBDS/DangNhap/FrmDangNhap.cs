@@ -303,5 +303,10 @@ namespace QuanLyBDS
         }
 
         #endregion
+
+        private void PanelDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
