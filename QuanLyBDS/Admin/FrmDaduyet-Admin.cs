@@ -13,9 +13,15 @@ namespace QuanLyBDS.Admin
 {
     public partial class FrmDaduyet_Admin : FrmDaduyet
     {
+        BUS_QuanLyBDS.KhachHang kh = new BUS_QuanLyBDS.KhachHang();
         public FrmDaduyet_Admin()
         {
             InitializeComponent();
+        }
+
+        private void FrmDaduyet_Admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

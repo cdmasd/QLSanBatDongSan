@@ -36,6 +36,7 @@
             ClientSize = new Size(722, 565);
             Name = "FrmDaduyet_Admin";
             Text = "FrmDaduyet_Admin";
+            Load += FrmDaduyet_Admin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
