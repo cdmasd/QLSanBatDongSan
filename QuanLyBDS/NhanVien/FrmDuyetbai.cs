@@ -14,7 +14,7 @@ namespace QuanLyBDS.NhanVien
 {
     public partial class FrmDuyetbai : UIForm
     {
-        BUS_QuanLyBDS.NhanVien nv = new BUS_QuanLyBDS.NhanVien(); 
+       // BUS_QuanLyBDS.NhanVien nv = new BUS_QuanLyBDS.NhanVien();
         public FrmDuyetbai()
         {
             InitializeComponent();
@@ -23,12 +23,12 @@ namespace QuanLyBDS.NhanVien
                 dtView = new UIDataGridView();
                 this.Controls.Add(dtView);
             }
-            
+
         }
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void dtView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -56,7 +56,7 @@ namespace QuanLyBDS.NhanVien
             }
         }
 
-        private void LoaDataNhanVien_KhachHang()
+        /*private void LoaDataNhanVien_KhachHang()
         {
             try
             {
@@ -101,6 +101,11 @@ namespace QuanLyBDS.NhanVien
             {
                 MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
             }
+        }
+*/
+        private void FrmDuyetbai_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

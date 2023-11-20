@@ -10,7 +10,7 @@ namespace DAL_QuanLyBDS
 {
     public class DangNhap : Context
     {
-        dynamic db = client.GetDatabase("QLBatDongSan");
+        //dynamic db = client.GetDatabase("QLBatDongSan");
         IMongoCollection<BsonDocument> taikhoan = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("TaiKhoan");
         IMongoCollection<BsonDocument> khachhang = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("Khachhang");
         public bool checkAccount(string email, string password)

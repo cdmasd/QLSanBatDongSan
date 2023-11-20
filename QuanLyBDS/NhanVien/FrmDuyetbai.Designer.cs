@@ -339,6 +339,7 @@
             ShowTitle = false;
             Text = "FrmDuyetbai";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
+            Load += FrmDuyetbai_Load;
             ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
             ResumeLayout(false);
             PerformLayout();
