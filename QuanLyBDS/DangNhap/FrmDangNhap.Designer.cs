@@ -127,12 +127,11 @@
             PanelDangNhap.TabIndex = 1;
             PanelDangNhap.Text = null;
             PanelDangNhap.TextAlignment = ContentAlignment.MiddleCenter;
-            PanelDangNhap.Click += PanelDangNhap_Click;
             // 
             // btnTaoTaiKhoan
             // 
             btnTaoTaiKhoan.ActiveLinkColor = Color.FromArgb(220, 155, 40);
-            btnTaoTaiKhoan.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTaoTaiKhoan.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnTaoTaiKhoan.LinkBehavior = LinkBehavior.AlwaysUnderline;
             btnTaoTaiKhoan.Location = new Point(239, 396);
             btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
@@ -146,16 +145,16 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(66, 342);
             label3.Name = "label3";
-            label3.Size = new Size(136, 25);
+            label3.Size = new Size(99, 19);
             label3.TabIndex = 50;
             label3.Text = "Mã xác nhận :";
             // 
             // btnLayma
             // 
-            btnLayma.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLayma.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLayma.Location = new Point(273, 367);
             btnLayma.MinimumSize = new Size(1, 1);
             btnLayma.Name = "btnLayma";
@@ -167,7 +166,7 @@
             // 
             // txtSoDTre
             // 
-            txtSoDTre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoDTre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSoDTre.Location = new Point(66, 247);
             txtSoDTre.Margin = new Padding(4, 5, 4, 5);
             txtSoDTre.MinimumSize = new Size(1, 16);
@@ -182,7 +181,7 @@
             // 
             // txtXacthuc
             // 
-            txtXacthuc.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtXacthuc.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtXacthuc.Location = new Point(66, 367);
             txtXacthuc.Margin = new Padding(4, 5, 4, 5);
             txtXacthuc.MinimumSize = new Size(1, 16);
@@ -196,7 +195,7 @@
             // 
             // btnKhach
             // 
-            btnKhach.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKhach.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnKhach.Location = new Point(159, 439);
             btnKhach.MinimumSize = new Size(1, 1);
             btnKhach.Name = "btnKhach";
@@ -209,7 +208,7 @@
             // btnDangNhapre
             // 
             btnDangNhapre.ActiveLinkColor = Color.FromArgb(220, 155, 40);
-            btnDangNhapre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDangNhapre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnDangNhapre.LinkBehavior = LinkBehavior.AlwaysUnderline;
             btnDangNhapre.Location = new Point(227, 497);
             btnDangNhapre.Name = "btnDangNhapre";
@@ -223,7 +222,7 @@
             // 
             // lb6re
             // 
-            lb6re.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb6re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lb6re.Location = new Point(102, 499);
             lb6re.Name = "lb6re";
             lb6re.Size = new Size(131, 23);
@@ -233,7 +232,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegister.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnRegister.Location = new Point(159, 431);
             btnRegister.MinimumSize = new Size(1, 1);
             btnRegister.Name = "btnRegister";
@@ -245,7 +244,7 @@
             // 
             // txtPasswordre
             // 
-            txtPasswordre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPasswordre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtPasswordre.Location = new Point(66, 307);
             txtPasswordre.Margin = new Padding(4, 5, 4, 5);
             txtPasswordre.MinimumSize = new Size(1, 16);
@@ -261,26 +260,26 @@
             // lb5re
             // 
             lb5re.AutoSize = true;
-            lb5re.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb5re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lb5re.Location = new Point(66, 282);
             lb5re.Name = "lb5re";
-            lb5re.Size = new Size(104, 25);
+            lb5re.Size = new Size(77, 19);
             lb5re.TabIndex = 41;
             lb5re.Text = "Mật khẩu :";
             // 
             // lb4re
             // 
             lb4re.AutoSize = true;
-            lb4re.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb4re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lb4re.Location = new Point(66, 223);
             lb4re.Name = "lb4re";
-            lb4re.Size = new Size(137, 25);
+            lb4re.Size = new Size(102, 19);
             lb4re.TabIndex = 37;
             lb4re.Text = "Số điện thoại :";
             // 
             // txtHoTenre
             // 
-            txtHoTenre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHoTenre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtHoTenre.Location = new Point(66, 187);
             txtHoTenre.Margin = new Padding(4, 5, 4, 5);
             txtHoTenre.MinimumSize = new Size(1, 16);
@@ -295,16 +294,16 @@
             // lb3re
             // 
             lb3re.AutoSize = true;
-            lb3re.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb3re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lb3re.Location = new Point(66, 162);
             lb3re.Name = "lb3re";
-            lb3re.Size = new Size(106, 25);
+            lb3re.Size = new Size(79, 19);
             lb3re.TabIndex = 38;
             lb3re.Text = "Họ và tên :";
             // 
             // txtEmailre
             // 
-            txtEmailre.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmailre.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmailre.Location = new Point(66, 127);
             txtEmailre.Margin = new Padding(4, 5, 4, 5);
             txtEmailre.MinimumSize = new Size(1, 16);
@@ -319,16 +318,16 @@
             // lb2re
             // 
             lb2re.AutoSize = true;
-            lb2re.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lb2re.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lb2re.Location = new Point(66, 102);
             lb2re.Name = "lb2re";
-            lb2re.Size = new Size(71, 25);
+            lb2re.Size = new Size(53, 19);
             lb2re.TabIndex = 35;
             lb2re.Text = "Email :";
             // 
             // lb1re
             // 
-            lb1re.Font = new Font("Microsoft Sans Serif", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            lb1re.Font = new Font("Roboto Condensed", 23F, FontStyle.Bold, GraphicsUnit.Point);
             lb1re.Location = new Point(136, 38);
             lb1re.Name = "lb1re";
             lb1re.Size = new Size(171, 33);
@@ -338,7 +337,7 @@
             // 
             // uiLabel2
             // 
-            uiLabel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiLabel2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             uiLabel2.Location = new Point(102, 394);
             uiLabel2.Name = "uiLabel2";
             uiLabel2.Size = new Size(140, 23);
@@ -348,7 +347,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogin.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogin.Location = new Point(167, 342);
             btnLogin.MinimumSize = new Size(1, 1);
             btnLogin.Name = "btnLogin";
@@ -361,7 +360,7 @@
             // btnForgotPassword
             // 
             btnForgotPassword.ActiveLinkColor = Color.FromArgb(220, 155, 40);
-            btnForgotPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnForgotPassword.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnForgotPassword.LinkBehavior = LinkBehavior.AlwaysUnderline;
             btnForgotPassword.Location = new Point(240, 291);
             btnForgotPassword.Name = "btnForgotPassword";
@@ -374,7 +373,7 @@
             // 
             // chkRemember
             // 
-            chkRemember.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            chkRemember.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             chkRemember.Location = new Point(66, 288);
             chkRemember.MinimumSize = new Size(1, 1);
             chkRemember.Name = "chkRemember";
@@ -384,7 +383,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.Location = new Point(66, 247);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
             txtPassword.MinimumSize = new Size(1, 16);
@@ -399,7 +398,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.Location = new Point(67, 178);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
@@ -416,7 +415,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(65, 223);
             label2.Name = "label2";
-            label2.Size = new Size(104, 25);
+            label2.Size = new Size(83, 20);
             label2.TabIndex = 26;
             label2.Text = "Mật khẩu :";
             // 
@@ -425,13 +424,13 @@
             label1.AutoSize = true;
             label1.Location = new Point(66, 154);
             label1.Name = "label1";
-            label1.Size = new Size(71, 25);
+            label1.Size = new Size(56, 20);
             label1.TabIndex = 25;
             label1.Text = "Email :";
             // 
             // uiLabel1
             // 
-            uiLabel1.Font = new Font("Microsoft Sans Serif", 23F, FontStyle.Bold, GraphicsUnit.Point);
+            uiLabel1.Font = new Font("Roboto Condensed", 23F, FontStyle.Bold, GraphicsUnit.Point);
             uiLabel1.Location = new Point(84, 27);
             uiLabel1.Name = "uiLabel1";
             uiLabel1.Size = new Size(276, 54);
@@ -446,7 +445,7 @@
             ClientSize = new Size(900, 565);
             Controls.Add(PanelDangNhap);
             Controls.Add(UIPanel);
-            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "FrmDangNhap";
             Padding = new Padding(0);
             ShowTitle = false;
