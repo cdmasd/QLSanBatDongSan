@@ -9,7 +9,8 @@
       "BUS_QuanLyBDS/1.0.0": {
         "dependencies": {
           "DAL_QuanLyBDS": "1.0.0",
-          "DTO_QuanLyBDS": "1.0.0"
+          "DTO_QuanLyBDS": "1.0.0",
+          "PasswordGenerator": "2.1.0"
         },
         "runtime": {
           "BUS_QuanLyBDS.dll": {}
@@ -130,6 +131,14 @@
           }
         }
       },
+      "PasswordGenerator/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/PasswordGenerator.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
       "SharpCompress/0.30.1": {
         "runtime": {
           "lib/net5.0/SharpCompress.dll": {
@@ -174,9 +183,6 @@
         }
       },
       "DTO_QuanLyBDS/1.0.0": {
-        "dependencies": {
-          "MongoDB.Driver": "2.22.0"
-        },
         "runtime": {
           "DTO_QuanLyBDS.dll": {}
         }
@@ -258,6 +264,13 @@
       "sha512": "sha512-fgNw8Dxpkq7mpoaAYes8cfnPRzvFIoB8oL9GPXwi3op/rONftl0WAeg4akRLcxfoVuUvuUO2wGoVBr3JzJ7Svw==",
       "path": "mongodb.libmongocrypt/1.8.0",
       "hashPath": "mongodb.libmongocrypt.1.8.0.nupkg.sha512"
+    },
+    "PasswordGenerator/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G70cCeAOYCk/uTuFw5PBGpYY9kmBZyzld7tphachvyU514PowMRDYyKwTefxIHNGWrhXY2d1DV5B1tDEnTtY3A==",
+      "path": "passwordgenerator/2.1.0",
+      "hashPath": "passwordgenerator.2.1.0.nupkg.sha512"
     },
     "SharpCompress/0.30.1": {
       "type": "package",

@@ -14,98 +14,147 @@ namespace QuanLyBDS.NhanVien
 {
     public partial class FrmDuyetbai : UIForm
     {
-       // BUS_QuanLyBDS.NhanVien nv = new BUS_QuanLyBDS.NhanVien();
+        BUS_QuanLyBDS.NhanVien nv = new BUS_QuanLyBDS.NhanVien();
         public FrmDuyetbai()
         {
             InitializeComponent();
-            if (dtView == null)
-            {
-                dtView = new UIDataGridView();
-                this.Controls.Add(dtView);
-            }
+            UiSettings();
+        }
+        public void UiSettings()
+        {
+            UIStyles.DPIScale = true;
+            UIStyles.GlobalFont = true;
+            UIStyles.GlobalFontName = "Tahoma";
+            UIStyles.SetDPIScale();
+            UILocalize.OK = "Ok";
+            UILocalize.Cancel = "Cancel";
+            UILocalize.SuccessTitle = "Success";
+            UILocalize.ErrorTitle = "Error";
+        }
+        private void FrmDuyetbai_Load(object sender, EventArgs e)
+        {
+            LoadBaiDang();
 
+        }
+        private void LoadBaiDang()
+        {
+            dtView.ClearAll();
+            List<BsonDocument> dataBaiDang = nv.Chuaduyet();
+            if (dataBaiDang.Count > 0)
+            {
+                // Load header name
+                foreach (var header in dataBaiDang[0].Names)
+                {
+                    if (header != "ThoiGianDang")
+                    {
+                        if (header != "Duyet")
+                        {
+                            dtView.Columns.Add(header, header);
+                        }
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                // Đổ dữ liệu vào từng dòng của DataGridView
+                foreach (var doc in dataBaiDang)
+                {
+                    List<object> values = new List<object>();
+                    foreach (var key in doc.Names)
+                    {
+                        values.Add(doc[key]);
+                    }
+                    dtView.Rows.Add(values.ToArray());
+                }
+                dtView.Columns[0].HeaderText = "ID";
+                dtView.Columns[1].HeaderText = "Tiêu đề";
+                dtView.Columns[2].HeaderText = "Loại nhà";
+                dtView.Columns[3].HeaderText = "Diện tích";
+                dtView.Columns[4].HeaderText = "Số phòng";
+                dtView.Columns[5].HeaderText = "Giá";
+                dtView.Columns[6].HeaderText = "Địa chỉ";
+                dtView.Columns[7].HeaderText = "Hình ảnh";
+                label8.Visible = false;
+            }
+            else
+            {
+                label8.Visible = true;
+            }
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            HinhAnh ha = new HinhAnh(txtHinhanh.Text);
+            ha.Show();
+        }
+
+        private void btnTuchoi_Click(object sender, EventArgs e)
+        {
+            if (txtTieude.Text != "")
+            {
+                if (nv.DeleteBaiDang(txtId.Text))
+                {
+                    ShowSuccessNotifier("Thành công");
+                }
+                else
+                {
+                    ShowErrorNotifier("Thất bại");
+                }
+            }
+            else
+            {
+                ShowErrorNotifier("Vui lòng chọn bài đăng trước");
+            }
+            LoadBaiDang();
+        }
+
+        private void dtView_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Nếu có tồn tại trên 1 dòng
+                if (dtView.Rows.Count > 1)
+                {
+                    // hiện dữ liệu khi dòng được chọn
+                    txtId.Text = dtView.CurrentRow.Cells[0].Value.ToString();
+                    txtTieude.Text = dtView.CurrentRow.Cells[1].Value.ToString();
+                    cbLoainha.Text = dtView.CurrentRow.Cells[2].Value.ToString();
+                    txtDientich.Text = dtView.CurrentRow.Cells[3].Value.ToString();
+                    txtSophong.Text = dtView.CurrentRow.Cells[4].Value.ToString();
+                    txtHinhanh.Text = dtView.CurrentRow.Cells[7].Value.ToString();
+                    txtDiachi.Text = dtView.CurrentRow.Cells[6].Value.ToString();
+                    txtGia.Text = dtView.CurrentRow.Cells[5].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Bảng không tồn tại dữ liệu");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi phát sinh");
+            }
         }
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-
-        }
-        private void dtView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            if (txtTieude.Text != "")
             {
-                DataGridViewRow selectedRow = dtView.Rows[e.RowIndex];
-
-                // Lấy dữ liệu từ các ô của dòng được chọn
-                string tieuDe = selectedRow.Cells["TieuDe"].Value.ToString();
-                string loaiNha = selectedRow.Cells["LoaiNha"].Value.ToString();
-                string dienTich = selectedRow.Cells["DienTich"].Value.ToString();
-                string soPhong = selectedRow.Cells["SoPhong"].Value.ToString();
-                string gia = selectedRow.Cells["Gia"].Value.ToString();
-                string diaChi = selectedRow.Cells["DiaChi"].Value.ToString();
-                string hinhAnh = selectedRow.Cells["HinhAnh"].Value.ToString();
-
-                // Hiển thị dữ liệu lên các controls
-                txtTieude.Text = tieuDe;
-                cbLoainha.Text = loaiNha;
-                txtDientich.Text = dienTich;
-                txtSophong.Text = soPhong;
-                txtGia.Text = gia;
-                txtDiachi.Text = diaChi;
-                txtHinhanh.Text = hinhAnh;
-            }
-        }
-
-        /*private void LoaDataNhanVien_KhachHang()
-        {
-            try
-            {
-                List<BsonDocument> dataBaiDang = nv.getDuyetbaiDang();
-
-                if (dataBaiDang != null && dataBaiDang.Count > 0)
+                if (nv.Duyetbai(txtId.Text,FrmMain.mail))
                 {
-                    if (dtView == null)
-                    {
-                        dtView = new UIDataGridView();
-                        this.Controls.Add(dtView);
-                    }
-
-                    // Xóa các cột hiện tại trong DataGridView
-                    dtView.Columns.Clear();
-
-                    // Tạo các cột mới cho DataGridView
-                    foreach (var key in dataBaiDang[0].Names)
-                    {
-                        dtView.Columns.Add(key, key);
-                    }
-
-                    // Đổ dữ liệu vào từng dòng của DataGridView
-                    foreach (var doc in dataBaiDang)
-                    {
-                        List<object> values = new List<object>();
-                        foreach (var key in doc.Names)
-                        {
-                            values.Add(doc[key]);
-                        }
-                        dtView.Rows.Add(values.ToArray());
-                    }
-
-                    dtView.Refresh();  // Cập nhật lại DataGridView
+                    ShowSuccessNotifier("Thành công");
                 }
                 else
                 {
-                    MessageBox.Show("Không có dữ liệu để hiển thị.");
+                    ShowErrorNotifier("Thất bại");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
+                ShowErrorNotifier("Vui lòng chọn bài đăng trước");
             }
-        }
-*/
-        private void FrmDuyetbai_Load(object sender, EventArgs e)
-        {
-
+            LoadBaiDang();
         }
     }
 }

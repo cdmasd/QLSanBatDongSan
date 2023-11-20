@@ -50,7 +50,7 @@
             // 
             // btnNap
             // 
-            btnNap.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNap.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnNap.Location = new Point(562, 70);
             btnNap.MinimumSize = new Size(1, 1);
             btnNap.Name = "btnNap";
@@ -62,56 +62,56 @@
             // txtSodu
             // 
             txtSodu.Enabled = false;
-            txtSodu.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSodu.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSodu.Location = new Point(276, 104);
             txtSodu.Margin = new Padding(4, 5, 4, 5);
             txtSodu.MinimumSize = new Size(1, 16);
             txtSodu.Name = "txtSodu";
             txtSodu.Padding = new Padding(5);
             txtSodu.ShowText = false;
-            txtSodu.Size = new Size(203, 27);
+            txtSodu.Size = new Size(203, 24);
             txtSodu.TabIndex = 23;
             txtSodu.TextAlignment = ContentAlignment.MiddleLeft;
             txtSodu.Watermark = "";
             // 
             // txtSdt
             // 
-            txtSdt.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSdt.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSdt.Location = new Point(276, 47);
             txtSdt.Margin = new Padding(4, 5, 4, 5);
             txtSdt.MinimumSize = new Size(1, 16);
             txtSdt.Name = "txtSdt";
             txtSdt.Padding = new Padding(5);
             txtSdt.ShowText = false;
-            txtSdt.Size = new Size(203, 27);
+            txtSdt.Size = new Size(203, 24);
             txtSdt.TabIndex = 24;
             txtSdt.TextAlignment = ContentAlignment.MiddleLeft;
             txtSdt.Watermark = "";
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.Location = new Point(32, 104);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
             txtEmail.Name = "txtEmail";
             txtEmail.Padding = new Padding(5);
             txtEmail.ShowText = false;
-            txtEmail.Size = new Size(203, 27);
+            txtEmail.Size = new Size(203, 24);
             txtEmail.TabIndex = 25;
             txtEmail.TextAlignment = ContentAlignment.MiddleLeft;
             txtEmail.Watermark = "";
             // 
             // txtHoten
             // 
-            txtHoten.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHoten.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtHoten.Location = new Point(32, 47);
             txtHoten.Margin = new Padding(4, 5, 4, 5);
             txtHoten.MinimumSize = new Size(1, 16);
             txtHoten.Name = "txtHoten";
             txtHoten.Padding = new Padding(5);
             txtHoten.ShowText = false;
-            txtHoten.Size = new Size(203, 27);
+            txtHoten.Size = new Size(203, 24);
             txtHoten.TabIndex = 22;
             txtHoten.TextAlignment = ContentAlignment.MiddleLeft;
             txtHoten.Watermark = "";
@@ -119,61 +119,61 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(276, 80);
             label4.Name = "label4";
-            label4.Size = new Size(75, 25);
+            label4.Size = new Size(54, 19);
             label4.TabIndex = 21;
             label4.Text = "Số dư :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(276, 23);
             label3.Name = "label3";
-            label3.Size = new Size(137, 25);
+            label3.Size = new Size(102, 19);
             label3.TabIndex = 20;
             label3.Text = "Số điện thoại :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(32, 80);
             label2.Name = "label2";
-            label2.Size = new Size(71, 25);
+            label2.Size = new Size(53, 19);
             label2.TabIndex = 19;
             label2.Text = "Email :";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(32, 23);
             label1.Name = "label1";
-            label1.Size = new Size(80, 25);
+            label1.Size = new Size(60, 19);
             label1.TabIndex = 18;
             label1.Text = "Họ tên :";
             // 
             // txtNap
             // 
             txtNap.Enabled = false;
-            txtNap.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNap.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtNap.Location = new Point(536, 38);
             txtNap.Margin = new Padding(4, 5, 4, 5);
             txtNap.MinimumSize = new Size(1, 16);
             txtNap.Name = "txtNap";
             txtNap.Padding = new Padding(5);
             txtNap.ShowText = false;
-            txtNap.Size = new Size(135, 27);
+            txtNap.Size = new Size(135, 24);
             txtNap.TabIndex = 24;
             txtNap.TextAlignment = ContentAlignment.MiddleLeft;
             txtNap.Watermark = "Nhập số tiền nạp";
             // 
             // btnXoa
             // 
-            btnXoa.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnXoa.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnXoa.Location = new Point(544, 100);
             btnXoa.MinimumSize = new Size(1, 1);
             btnXoa.Name = "btnXoa";
@@ -181,7 +181,6 @@
             btnXoa.TabIndex = 27;
             btnXoa.Text = "Xoá khách hàng";
             btnXoa.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Click += btnXoa_Click;
             // 
             // dtView
             // 
@@ -222,7 +221,6 @@
             dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(48, 48, 48);
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dtView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dtView.RowHeadersWidth = 51;
             dataGridViewCellStyle5.BackColor = Color.White;
             dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle5.ForeColor = Color.FromArgb(48, 48, 48);
@@ -235,7 +233,6 @@
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtView.Size = new Size(698, 398);
             dtView.TabIndex = 28;
-            dtView.CellContentClick += dtView_CellContentClick;
             // 
             // FrmQLKhachHang
             // 
@@ -259,7 +256,6 @@
             ShowTitle = false;
             Text = "FrmQLKhachHang";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
-            Load += FrmQLKhachHang_Load;
             ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -39,7 +39,7 @@
             // 
             // btnDoimatkhau
             // 
-            btnDoimatkhau.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDoimatkhau.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnDoimatkhau.Location = new Point(311, 367);
             btnDoimatkhau.MinimumSize = new Size(1, 1);
             btnDoimatkhau.Name = "btnDoimatkhau";
@@ -47,11 +47,10 @@
             btnDoimatkhau.TabIndex = 13;
             btnDoimatkhau.Text = "Đổi mật khẩu";
             btnDoimatkhau.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoimatkhau.Click += btnDoimatkhau_Click;
             // 
             // txtMatkhaumoi
             // 
-            txtMatkhaumoi.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMatkhaumoi.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtMatkhaumoi.Location = new Point(241, 327);
             txtMatkhaumoi.Margin = new Padding(4, 5, 4, 5);
             txtMatkhaumoi.MinimumSize = new Size(1, 16);
@@ -65,7 +64,7 @@
             // 
             // txtMatkhauhientai
             // 
-            txtMatkhauhientai.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMatkhauhientai.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtMatkhauhientai.Location = new Point(241, 257);
             txtMatkhauhientai.Margin = new Padding(4, 5, 4, 5);
             txtMatkhauhientai.MinimumSize = new Size(1, 16);
@@ -79,7 +78,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.Location = new Point(241, 187);
             txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.MinimumSize = new Size(1, 16);
@@ -94,30 +93,30 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(241, 303);
             label3.Name = "label3";
-            label3.Size = new Size(129, 25);
+            label3.Size = new Size(97, 19);
             label3.TabIndex = 9;
             label3.Text = "Mật khẩu mới";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(241, 233);
             label2.Name = "label2";
-            label2.Size = new Size(160, 25);
+            label2.Size = new Size(122, 19);
             label2.TabIndex = 8;
             label2.Text = "Mật khẩu hiện tại";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(241, 163);
             label1.Name = "label1";
-            label1.Size = new Size(60, 25);
+            label1.Size = new Size(45, 19);
             label1.TabIndex = 7;
             label1.Text = "Email";
             // 

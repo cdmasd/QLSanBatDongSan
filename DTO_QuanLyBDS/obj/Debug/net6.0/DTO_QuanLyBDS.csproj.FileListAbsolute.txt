@@ -10,15 +10,15 @@ C:\Users\Admin\Desktop\QuanLyBDS\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.dl
 C:\Users\Admin\Desktop\QuanLyBDS\DTO_QuanLyBDS\obj\Debug\net6.0\refint\DTO_QuanLyBDS.dll
 C:\Users\Admin\Desktop\QuanLyBDS\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.pdb
 C:\Users\Admin\Desktop\QuanLyBDS\DTO_QuanLyBDS\obj\Debug\net6.0\ref\DTO_QuanLyBDS.dll
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.deps.json
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.dll
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.pdb
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfoInputs.cache
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfo.cs
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.dll
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\refint\DTO_QuanLyBDS.dll
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.pdb
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\ref\DTO_QuanLyBDS.dll
-C:\Users\Admin\Desktop\New folder (2)\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.deps.json
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.pdb
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfo.cs
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\refint\DTO_QuanLyBDS.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.pdb
+C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\ref\DTO_QuanLyBDS.dll

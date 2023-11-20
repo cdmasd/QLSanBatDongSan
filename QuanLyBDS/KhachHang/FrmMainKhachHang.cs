@@ -153,5 +153,12 @@ namespace QuanLyBDS.KhachHang
             ResetColor();
             btnDoimk.BackColor = Color.SteelBlue;
         }
+
+        private void btnDangxuat_Click(object sender, EventArgs e)
+        {
+            FrmMain.mail = "Quản lý bất động sản";
+            FrmMain.session = 0;
+            this.Close();
+        }
     }
 }
