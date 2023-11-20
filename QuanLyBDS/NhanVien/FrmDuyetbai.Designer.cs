@@ -51,11 +51,14 @@
             label1 = new Label();
             dtView = new Sunny.UI.UIDataGridView();
             btnXem = new Sunny.UI.UIButton();
+            txtId = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
             // txtDiachi
             // 
+            txtDiachi.Enabled = false;
             txtDiachi.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDiachi.Location = new Point(433, 45);
             txtDiachi.Margin = new Padding(4, 5, 4, 5);
@@ -88,6 +91,7 @@
             btnDuyet.TabIndex = 34;
             btnDuyet.Text = "Duyệt";
             btnDuyet.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDuyet.Click += btnDuyet_Click;
             // 
             // btnTuchoi
             // 
@@ -99,9 +103,11 @@
             btnTuchoi.TabIndex = 32;
             btnTuchoi.Text = "Từ chối";
             btnTuchoi.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTuchoi.Click += btnTuchoi_Click;
             // 
             // txtHinhanh
             // 
+            txtHinhanh.Enabled = false;
             txtHinhanh.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtHinhanh.Location = new Point(433, 105);
             txtHinhanh.Margin = new Padding(4, 5, 4, 5);
@@ -116,6 +122,7 @@
             // 
             // txtGia
             // 
+            txtGia.Enabled = false;
             txtGia.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtGia.Location = new Point(101, 157);
             txtGia.Margin = new Padding(4, 5, 4, 5);
@@ -130,6 +137,7 @@
             // 
             // txtSophong
             // 
+            txtSophong.Enabled = false;
             txtSophong.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSophong.Location = new Point(101, 122);
             txtSophong.Margin = new Padding(4, 5, 4, 5);
@@ -144,6 +152,7 @@
             // 
             // txtDientich
             // 
+            txtDientich.Enabled = false;
             txtDientich.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDientich.Location = new Point(101, 87);
             txtDientich.Margin = new Padding(4, 5, 4, 5);
@@ -159,6 +168,7 @@
             // cbLoainha
             // 
             cbLoainha.DataSource = null;
+            cbLoainha.Enabled = false;
             cbLoainha.FillColor = Color.White;
             cbLoainha.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbLoainha.Location = new Point(101, 52);
@@ -173,6 +183,7 @@
             // 
             // txtTieude
             // 
+            txtTieude.Enabled = false;
             txtTieude.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTieude.Location = new Point(101, 17);
             txtTieude.Margin = new Padding(4, 5, 4, 5);
@@ -249,7 +260,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(243, 249, 255);
             dtView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dtView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtView.BackgroundColor = Color.FromArgb(243, 249, 255);
             dtView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -296,6 +307,7 @@
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtView.Size = new Size(698, 353);
             dtView.TabIndex = 35;
+            dtView.Click += dtView_Click;
             // 
             // btnXem
             // 
@@ -307,12 +319,36 @@
             btnXem.TabIndex = 36;
             btnXem.Text = "Xem ảnh";
             btnXem.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnXem.Click += btnXem_Click;
+            // 
+            // txtId
+            // 
+            txtId.AutoSize = true;
+            txtId.Location = new Point(331, 60);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(55, 16);
+            txtId.TabIndex = 37;
+            txtId.Text = "label8";
+            txtId.Visible = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(289, 363);
+            label8.Name = "label8";
+            label8.Size = new Size(118, 19);
+            label8.TabIndex = 38;
+            label8.Text = "Không có dữ liệu";
+            label8.Visible = false;
             // 
             // FrmDuyetbai
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(722, 565);
+            Controls.Add(label8);
+            Controls.Add(txtId);
             Controls.Add(btnXem);
             Controls.Add(dtView);
             Controls.Add(txtDiachi);
@@ -337,6 +373,7 @@
             ShowTitle = false;
             Text = "FrmDuyetbai";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
+            Load += FrmDuyetbai_Load;
             ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -360,7 +397,9 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private Sunny.UI.UIDataGridView dtView;
+        public Sunny.UI.UIDataGridView dtView;
         private Sunny.UI.UIButton btnXem;
+        private Label txtId;
+        private Label label8;
     }
 }

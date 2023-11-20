@@ -250,6 +250,7 @@
             txtPasswordre.MinimumSize = new Size(1, 16);
             txtPasswordre.Name = "txtPasswordre";
             txtPasswordre.Padding = new Padding(5);
+            txtPasswordre.PasswordChar = '*';
             txtPasswordre.ShowText = false;
             txtPasswordre.Size = new Size(295, 29);
             txtPasswordre.TabIndex = 39;
