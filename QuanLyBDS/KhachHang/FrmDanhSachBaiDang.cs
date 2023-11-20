@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static MongoDB.Driver.WriteConcern;
 
 namespace QuanLyBDS.KhachHang
 {
@@ -110,6 +111,7 @@ namespace QuanLyBDS.KhachHang
                 txtGia.Text = gia;
                 txtDiachi.Text = diaChi;
                 txtHinhanh.Text = hinhAnh;
+                
             }
         }
 
@@ -131,52 +133,47 @@ namespace QuanLyBDS.KhachHang
             }
 
         }
-            private void LoadDataKhachHang()
+        private void LoadDataKhachHang()
+        {
+            List<BsonDocument> dataBaiDang = kh.GetBaiDang();
+            dtView.ClearAll(); 
+            // Load header name
+            foreach (var header in dataBaiDang[0].Names)
             {
-                try
+                if (header != "ThoiGianDang")
                 {
-                    List<BsonDocument> dataBaiDang = kh.GetDataKhachHang();
-
-                    if (dataBaiDang != null && dataBaiDang.Count > 0)
+                    if (header != "Duyet")
                     {
-                        if (dtView == null)
-                        {
-                            dtView = new UIDataGridView();
-                            this.Controls.Add(dtView);
-                        }
-
-                        // Xóa các cột hiện tại trong DataGridView
-                        dtView.Columns.Clear();
-
-                        // Tạo các cột mới cho DataGridView
-                        foreach (var key in dataBaiDang[0].Names)
-                        {
-                            dtView.Columns.Add(key, key);
-                        }
-
-                        // Đổ dữ liệu vào từng dòng của DataGridView
-                        foreach (var doc in dataBaiDang)
-                        {
-                            List<object> values = new List<object>();
-                            foreach (var key in doc.Names)
-                            {
-                                values.Add(doc[key]);
-                            }
-                            dtView.Rows.Add(values.ToArray());
-                        }
-
-                        dtView.Refresh();  // Cập nhật lại DataGridView
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không có dữ liệu để hiển thị.");
+                        dtView.Columns.Add(header, header);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
+                    continue;
                 }
             }
+        
+
+            // Đổ dữ liệu vào từng dòng của DataGridView
+            foreach (var doc in dataBaiDang)
+            {
+                List<object> values = new List<object>();
+                foreach (var key in doc.Names)
+                {
+                    values.Add(doc[key]);
+                }
+                dtView.Rows.Add(values.ToArray());
+            }
+            dtView.Columns[0].HeaderText = "ID";
+            dtView.Columns[1].HeaderText = "Tiêu đề";
+            dtView.Columns[2].HeaderText = "Loại nhà";
+            dtView.Columns[3].HeaderText = "Diện tích";
+            dtView.Columns[4].HeaderText = "Số phòng";
+            dtView.Columns[5].HeaderText = "Giá";
+            dtView.Columns[6].HeaderText = "Địa chỉ";
+            dtView.Columns[7].HeaderText = "Hình Ảnh";
+            
+        }
 
 
         private void FrmDanhSachBaiDang_Load(object sender, EventArgs e)
@@ -186,5 +183,5 @@ namespace QuanLyBDS.KhachHang
 
     }
 }
-     
+
 

@@ -49,15 +49,11 @@ namespace QuanLyBDS.NhanVien
         {
 
         }
-        public void ResetValue()
-        {
-
-        }
         private void Loadata()
         {
             try
             {
-                List<BsonDocument> dataBaiDang = kh.GetDataKhachHang();
+                List<BsonDocument> dataBaiDang = kh.GetBaiDang();
 
                 if (dataBaiDang != null && dataBaiDang.Count > 0)
                 {

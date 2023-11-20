@@ -21,7 +21,7 @@ namespace BUS_QuanLyBDS
                 return false;
             }
         }
-        public List<BsonDocument> GetDataKhachHang()
+        public List<BsonDocument> GetBaiDang()
         {
             try
             {
@@ -51,5 +51,34 @@ namespace BUS_QuanLyBDS
         {
             return kh.DeletebaiDang(tieude); 
         }
+        public List<BsonDocument> GetKhachHang()
+        {
+            try
+            {
+                return kh.Getkhachhang(); 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi lấy dữ liệu: {ex.Message}");
+                return null;
+            }
+        }
+        public bool UpdataKhachhang(string email, string hoten, string sdt, string sodu)
+        {
+            try
+            {
+                return kh.UpdataKhachhang(email, hoten, sdt, sodu); 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi cập nhật bài đăng: {ex.Message}");
+                return false;
+            }
+        }
+        public bool deleteKhachhang(string email)
+        {
+            return kh.deleteKhachhang(email); 
+        }
+    
     }
 }

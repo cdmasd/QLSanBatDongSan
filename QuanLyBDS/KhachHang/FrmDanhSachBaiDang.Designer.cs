@@ -50,13 +50,14 @@
             label7 = new Label();
             txtHinhanh = new Sunny.UI.UITextBox();
             label6 = new Label();
+            uiButton1 = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(561, 165);
+            btnUpdate.Location = new Point(610, 165);
             btnUpdate.MinimumSize = new Size(1, 1);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(100, 35);
@@ -68,7 +69,7 @@
             // btnUpload
             // 
             btnUpload.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpload.Location = new Point(407, 165);
+            btnUpload.Location = new Point(339, 165);
             btnUpload.MinimumSize = new Size(1, 1);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(100, 35);
@@ -303,11 +304,23 @@
             label6.TabIndex = 29;
             label6.Text = "Hình ảnh :";
             // 
+            // uiButton1
+            // 
+            uiButton1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            uiButton1.Location = new Point(477, 165);
+            uiButton1.MinimumSize = new Size(1, 1);
+            uiButton1.Name = "uiButton1";
+            uiButton1.Size = new Size(100, 35);
+            uiButton1.TabIndex = 33;
+            uiButton1.Text = "Xem ảnh";
+            uiButton1.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            // 
             // FrmDanhSachBaiDang
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(722, 565);
+            Controls.Add(uiButton1);
             Controls.Add(txtDiachi);
             Controls.Add(label7);
             Controls.Add(txtHinhanh);
@@ -355,5 +368,6 @@
         private Label label7;
         private Sunny.UI.UITextBox txtHinhanh;
         private Label label6;
+        private Sunny.UI.UIButton uiButton1;
     }
 }
