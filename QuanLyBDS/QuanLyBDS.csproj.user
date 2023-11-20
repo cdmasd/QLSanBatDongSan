@@ -70,5 +70,8 @@
     <Compile Update="NhanVien\FrmQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NhanVien\HinhAnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

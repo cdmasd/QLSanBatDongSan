@@ -1,4 +1,5 @@
-﻿using QuanLyBDS.NhanVien;
+﻿using MongoDB.Bson;
+using QuanLyBDS.NhanVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
