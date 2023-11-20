@@ -10,7 +10,7 @@ namespace DAL_QuanLyBDS
 {
     public class DangNhap : Context
     {
-        //dynamic db = client.GetDatabase("QLBatDongSan");
+        dynamic db = client.GetDatabase("QLBatDongSan");
         IMongoCollection<BsonDocument> taikhoan = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("TaiKhoan");
         IMongoCollection<BsonDocument> khachhang = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("Khachhang");
         public bool checkAccount(string email, string password)
@@ -45,13 +45,24 @@ namespace DAL_QuanLyBDS
         }
         public bool insertKhachhang(string email, string name, string phone, string password)
         {
+            var manv = getNextMaNV();
             try
             {
+                if (!checkEmail(email))
+                {
+                    return false;
+                }
+                if (!checkPhone(phone))
+                {
+                    return false;
+                }
                 khachhang.InsertOne(new BsonDocument
                 {
+                    {"_id",manv},
                     {"Email",email},
                     {"Hoten",name },
-                    {"Sodienthoai",phone }
+                    {"Sodienthoai",phone },
+                    {"Sodu", 0 }
                 });
                 registerAccount(email, password);
                 return true;
@@ -68,11 +79,55 @@ namespace DAL_QuanLyBDS
                 var update = Builders<BsonDocument>.Update.Set("Matkhau", password);
                 taikhoan.UpdateOne(filter, update);
                 return true;
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
                 return false;
             }
         }
+        // Hàm để tạo giá trị mới cho MaNV
+        string getNextMaNV()
+        {
+            // Giảm dần theo mã nhân viên
+            var filter = Builders<BsonDocument>.Sort.Descending("_id");
+            // Lấy ra đối tượng có mã nhân viên cao nhất
+            var lastDocument = khachhang.Find(new BsonDocument()).Sort(filter).Limit(1).ToList();
+            // Nếu trong đối tượng lastDocument không tìm được đối tượng nào thì trả về null
+            // Ngược lại gán mã nhân viên cho lastMaNV
+            var lastMaNV = lastDocument.Count > 0 ? lastDocument[0]["_id"].ToString() : null;
+
+            if (lastMaNV != null)
+            {
+                // Lấy số từ chuỗi và tăng giá trị lên 1
+                var lastNumber = int.Parse(lastMaNV.Replace("NV", ""));
+                return $"NV{lastNumber + 1:00}";
+            }
+            else
+            {
+                return "NV01";
+            }
+        }
+
+        #region check existed
+        public bool checkEmail(string email)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("Email", email);
+            var result =  khachhang.Find(filter).ToList();
+            if(result.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool checkPhone(string phone)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("Sodienthoai", phone);
+            var result = khachhang.Find(filter).ToList();
+            if (result.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
     }
 }
