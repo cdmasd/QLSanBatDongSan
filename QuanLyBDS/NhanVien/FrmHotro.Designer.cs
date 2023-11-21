@@ -41,6 +41,8 @@
             label2 = new Label();
             label1 = new Label();
             dtView = new Sunny.UI.UIDataGridView();
+            label8 = new Label();
+            txtId = new Label();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
@@ -93,6 +95,7 @@
             btnDahotro.TabIndex = 11;
             btnDahotro.Text = "Đã hỗ trợ";
             btnDahotro.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDahotro.Click += btnDahotro_Click;
             // 
             // txtHotro
             // 
@@ -179,12 +182,36 @@
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtView.Size = new Size(698, 302);
             dtView.TabIndex = 54;
+            dtView.Click += dtView_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(296, 392);
+            label8.Name = "label8";
+            label8.Size = new Size(118, 19);
+            label8.TabIndex = 55;
+            label8.Text = "Không có dữ liệu";
+            label8.Visible = false;
+            // 
+            // txtId
+            // 
+            txtId.AutoSize = true;
+            txtId.Location = new Point(314, 39);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(55, 16);
+            txtId.TabIndex = 56;
+            txtId.Text = "label4";
+            txtId.Visible = false;
             // 
             // FrmHotro
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(722, 565);
+            Controls.Add(txtId);
+            Controls.Add(label8);
             Controls.Add(dtView);
             Controls.Add(txtChitiethotro);
             Controls.Add(txtSodt);
@@ -198,6 +225,7 @@
             ShowTitle = false;
             Text = "FrmHotro";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
+            Load += FrmHotro_Load;
             ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -213,5 +241,7 @@
         private Label label2;
         private Label label1;
         private Sunny.UI.UIDataGridView dtView;
+        private Label label8;
+        private Label txtId;
     }
 }

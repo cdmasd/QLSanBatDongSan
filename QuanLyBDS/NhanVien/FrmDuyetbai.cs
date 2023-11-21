@@ -47,7 +47,7 @@ namespace QuanLyBDS.NhanVien
                 {
                     if (header != "ThoiGianDang")
                     {
-                        if (header != "Duyet")
+                        if (header != "TrangThai")
                         {
                             dtView.Columns.Add(header, header);
                         }
@@ -95,6 +95,7 @@ namespace QuanLyBDS.NhanVien
             {
                 if (nv.DeleteBaiDang(txtId.Text))
                 {
+                    resetValues();
                     ShowSuccessNotifier("Thành công");
                 }
                 else
@@ -144,6 +145,7 @@ namespace QuanLyBDS.NhanVien
                 if (nv.Duyetbai(txtId.Text,FrmMain.mail))
                 {
                     ShowSuccessNotifier("Thành công");
+                    resetValues();
                 }
                 else
                 {
@@ -155,6 +157,17 @@ namespace QuanLyBDS.NhanVien
                 ShowErrorNotifier("Vui lòng chọn bài đăng trước");
             }
             LoadBaiDang();
+        }
+        void resetValues()
+        {
+            txtId.Text = "";
+            txtTieude.Text = "";
+            cbLoainha.Text = "";
+            txtDientich.Text = "";
+            txtSophong.Text = "";
+            txtHinhanh.Text = "";
+            txtDiachi.Text = "";
+            txtGia.Text = "";
         }
     }
 }
