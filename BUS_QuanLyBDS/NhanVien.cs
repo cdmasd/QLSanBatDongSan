@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BUS_QuanLyBDS
 {
-    public class NhanVien
+    public partial class NhanVien
     {
         DAL_QuanLyBDS.NhanVien nv = new DAL_QuanLyBDS.NhanVien();
         public List<BsonDocument> Chuaduyet()
