@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL_QuanLyBDS
 {
-    public class DangNhap : Context
+    public partial class DangNhap : Context
     {
         dynamic db = client.GetDatabase("QLBatDongSan");
         IMongoCollection<BsonDocument> taikhoan = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("TaiKhoan");

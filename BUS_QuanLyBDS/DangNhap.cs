@@ -11,7 +11,7 @@ using PasswordGenerator;
 
 namespace BUS_QuanLyBDS
 {
-    public class DangNhap
+    public partial class DangNhap
     {
         DAL_QuanLyBDS.DangNhap dn = new DAL_QuanLyBDS.DangNhap();
         public bool checkAccount(string email, string password)
