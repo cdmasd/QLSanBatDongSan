@@ -12,11 +12,19 @@ namespace DAL_QuanLyBDS
     {
         IMongoCollection<BsonDocument> dangtin = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("KhachHangDangTin");
         IMongoCollection<BsonDocument> nhanvien = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("NhanVien");
+        IMongoCollection<BsonDocument> ticket = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("Ticket");
         public List<BsonDocument> Chuaduyet()
         {
             return dangtin.Find(new BsonDocument
             {
-                { "Duyet", false }
+                { "TrangThai", false }
+            }).ToList();
+        }
+        public List<BsonDocument> Daduyet()
+        {
+            return dangtin.Find(new BsonDocument
+            {
+                { "TrangThai", true }
             }).ToList();
         }
         public bool DeleteBaiDang(string id)
@@ -47,8 +55,36 @@ namespace DAL_QuanLyBDS
             try
             {
                 var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
-                var update = Builders<BsonDocument>.Update.Set("Duyet", true).Set("NguoiDuyet", getNameNv(email));
+                var update = Builders<BsonDocument>.Update.Set("TrangThai", true).Set("NguoiDuyet", getNameNv(email));
                 var result = dangtin.UpdateOne(filter, update);
+                if (result.ModifiedCount > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public List<BsonDocument> Chuahotro()
+        {
+            return ticket.Find(new BsonDocument
+            {
+                { "TrangThai", false }
+            }).ToList();
+        }
+        public bool Hotro(string id, string email)
+        {
+            try
+            {
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+                var update = Builders<BsonDocument>.Update.Set("TrangThai", true).Set("NguoiHoTro", getNameNv(email));
+                var result = ticket.UpdateOne(filter, update);
                 if (result.ModifiedCount > 0)
                 {
                     return true;

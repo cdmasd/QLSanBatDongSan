@@ -16,6 +16,10 @@ namespace BUS_QuanLyBDS
         {
             return nv.Chuaduyet();
         }
+        public List<BsonDocument> Daduyet()
+        {
+            return nv.Daduyet();
+        }
         public bool Duyetbai(string id, string email)
         {
             return nv.Duyetbai(id, email);
@@ -23,6 +27,14 @@ namespace BUS_QuanLyBDS
         public bool DeleteBaiDang(string id)
         {
             return nv.DeleteBaiDang(id);
+        }
+        public List<BsonDocument> Chuahotro()
+        {
+            return nv.Chuahotro();
+        }
+        public bool Hotro(string id, string email)
+        {
+            return nv.Hotro(id, email);
         }
     }
 }
