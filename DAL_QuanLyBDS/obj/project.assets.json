@@ -296,6 +296,12 @@
       "DTO_QuanLyBDS/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+<<<<<<< HEAD
+=======
+        "dependencies": {
+          "MongoDB.Bson": "2.22.0"
+        },
+>>>>>>> ChienBr
         "compile": {
           "bin/placeholder/DTO_QuanLyBDS.dll": {}
         },

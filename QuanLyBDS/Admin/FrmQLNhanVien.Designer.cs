@@ -182,6 +182,7 @@
             btnThem.TabIndex = 11;
             btnThem.Text = "Thêm";
             btnThem.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
@@ -193,6 +194,7 @@
             btnSua.TabIndex = 12;
             btnSua.Text = "Sửa";
             btnSua.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
@@ -204,6 +206,7 @@
             btnXoa.TabIndex = 13;
             btnXoa.Text = "Xóa";
             btnXoa.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnDanhsach
             // 
@@ -215,6 +218,7 @@
             btnDanhsach.TabIndex = 14;
             btnDanhsach.Text = "Danh sách";
             btnDanhsach.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDanhsach.Click += btnDanhsach_Click;
             // 
             // txtTimkiem
             // 
@@ -240,6 +244,7 @@
             btnTimkiem.TabIndex = 16;
             btnTimkiem.Text = "Tìm kiếm";
             btnTimkiem.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTimkiem.Click += btnTimkiem_Click;
             // 
             // dtView
             // 
@@ -292,6 +297,7 @@
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtView.Size = new Size(698, 297);
             dtView.TabIndex = 17;
+            dtView.CellClick += dtView_CellClick;
             // 
             // FrmQLNhanVien
             // 
@@ -320,6 +326,7 @@
             ShowTitle = false;
             Text = "FrmQLNhanVien";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
+            Load += FrmQLNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
             ResumeLayout(false);
         }

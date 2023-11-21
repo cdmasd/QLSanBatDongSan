@@ -22,3 +22,16 @@ C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLy
 C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\refint\DTO_QuanLyBDS.dll
 C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.pdb
 C:\Users\Admin\Desktop\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\ref\DTO_QuanLyBDS.dll
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.deps.json
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.dll
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\bin\Debug\net6.0\DTO_QuanLyBDS.pdb
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.AssemblyReference.cache
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfoInputs.cache
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.AssemblyInfo.cs
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.csproj.CoreCompileInputs.cache
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.sourcelink.json
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.dll
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\refint\DTO_QuanLyBDS.dll
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\DTO_QuanLyBDS.pdb
+D:\PRO131_DA1_K4\Project\QLSanBatDongSan\DTO_QuanLyBDS\obj\Debug\net6.0\ref\DTO_QuanLyBDS.dll

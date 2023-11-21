@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "RSFnntOeF0L51gSqo1I5TE3O3uef+NE8k8IgTftLJIAIPwyDPTvDn4xN1is9vgKFVQmHNK7OfrVj8pkewjq1UQ==",
+=======
+  "dgSpecHash": "UTYuUkytfk1ea73XabC28CNmNswBFGy0WdpOj7z8FcGIGExuo/8uIFiJGAP5MUxGpSd4zHzJqnJVMUZjpRoW+g==",
+>>>>>>> ChienBr
   "success": true,
   "projectFilePath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
   "expectedPackageFiles": [

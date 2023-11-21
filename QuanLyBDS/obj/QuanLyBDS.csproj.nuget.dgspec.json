@@ -55,6 +55,13 @@
             "PasswordGenerator": {
               "target": "Package",
               "version": "[2.1.0, )"
+<<<<<<< HEAD
+=======
+            },
+            "XAct.Core.PCL": {
+              "target": "Package",
+              "version": "[0.0.5014, )"
+>>>>>>> ChienBr
             }
           },
           "imports": [
@@ -187,6 +194,15 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+<<<<<<< HEAD
+=======
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.22.0, )"
+            }
+          },
+>>>>>>> ChienBr
           "imports": [
             "net461",
             "net462",
