@@ -123,7 +123,7 @@ namespace QuanLyBDS.NhanVien
             }
             else
             {
-                ActiveChildForm("FrmDaduyet");
+                ActiveChildForm("FrmHotro");
             }
         }
 
