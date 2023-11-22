@@ -57,7 +57,6 @@ namespace DAL_QuanLyBDS
         {
             try
             {
-                TaiKhoanDTO tk = new TaiKhoanDTO();
                 if (string.IsNullOrWhiteSpace(nhanVien.Email) || string.IsNullOrWhiteSpace(nhanVien.Hoten) || string.IsNullOrWhiteSpace(nhanVien.Diachi) || string.IsNullOrWhiteSpace(nhanVien.Sodienthoai))
                 {
                     return "Không thể thêm nhân viên xin hãy kiểm tra lại";
@@ -67,8 +66,8 @@ namespace DAL_QuanLyBDS
                 nvColl.InsertOne(nhanVien);
                 tkColl.InsertOne(new TaiKhoanDTO
                 {
-                    Email = tk.Email,
-                    Matkhau = tk.Matkhau,
+                    Email = taiKhoan.Email,
+                    Matkhau = taiKhoan.Matkhau,
                     Vaitro = "nhanvien"
                 });
                 return "Thêm nhân viên thành công";
