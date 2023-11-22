@@ -45,7 +45,7 @@ namespace DAL_QuanLyBDS
         }
         public bool insertKhachhang(string email, string name, string phone, string password)
         {
-            var manv = getNextMaNV();
+            var makh = getNextMaNV();
             try
             {
                 if (!checkEmail(email))
@@ -58,7 +58,7 @@ namespace DAL_QuanLyBDS
                 }
                 khachhang.InsertOne(new BsonDocument
                 {
-                    {"_id",manv},
+                    {"_id",makh},
                     {"Email",email},
                     {"Hoten",name },
                     {"Sodienthoai",phone },
@@ -99,12 +99,12 @@ namespace DAL_QuanLyBDS
             if (lastMaNV != null)
             {
                 // Lấy số từ chuỗi và tăng giá trị lên 1
-                var lastNumber = int.Parse(lastMaNV.Replace("NV", ""));
-                return $"NV{lastNumber + 1:00}";
+                var lastNumber = int.Parse(lastMaNV.Replace("KH", ""));
+                return $"KH{lastNumber + 1:00}";
             }
             else
             {
-                return "NV01";
+                return "KH01";
             }
         }
 
