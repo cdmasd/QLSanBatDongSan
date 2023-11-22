@@ -296,12 +296,9 @@
       "DTO_QuanLyBDS/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-<<<<<<< HEAD
-=======
         "dependencies": {
           "MongoDB.Bson": "2.22.0"
         },
->>>>>>> ChienBr
         "compile": {
           "bin/placeholder/DTO_QuanLyBDS.dll": {}
         },
@@ -806,23 +803,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
       "projectName": "DAL_QuanLyBDS",
-      "projectPath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DAL_QuanLyBDS\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -831,15 +828,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {
-              "projectPath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj"
+            "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj"
             }
           }
         }
@@ -875,8 +871,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
