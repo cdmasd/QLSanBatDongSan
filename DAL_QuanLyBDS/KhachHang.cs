@@ -22,14 +22,14 @@ namespace DAL_QuanLyBDS
                 var dangtinDocument = new BsonDocument
                 {
                     {"_id", nextMaNV},
-                    {"TieuDe", tieuDe},
-                    {"LoaiNha", loaiNha},
-                    {"DienTich", dienTich},
-                    {"SoPhong", soPhong},
+                    {"Tieude", tieuDe},
+                    {"Loainha", loaiNha},
+                    {"Dientich", dienTich},
+                    {"Sophong", soPhong},
                     {"Gia", gia},
-                    {"DiaChi", diaChi},
-                    {"HinhAnh", hinhAnh},
-                    {"ThoiGianDang", DateTime.Now.ToString("dd-MM-yyyy")},
+                    {"Diachi", diaChi},
+                    {"Hinhanh", hinhAnh},
+                    {"Thoigiandang", DateTime.Now.ToString("dd-MM-yyyy")},
                     {"Trangthai", false}
                 };
 
@@ -78,13 +78,13 @@ namespace DAL_QuanLyBDS
                 // Tạo bộ cập nhật để thiết lập các giá trị mới cho các trường trong bản ghi
                 var updateBuilder = Builders<BsonDocument>.Update;
                 var update = updateBuilder
-                    .Set("TieuDe", tieuDe)
-                    .Set("LoaiNha", loaiNha)
-                    .Set("DienTich", dienTich)
-                    .Set("SoPhong", soPhong)
+                    .Set("Tieude", tieuDe)
+                    .Set("Loainha", loaiNha)
+                    .Set("Dientich", dienTich)
+                    .Set("Sophong", soPhong)
                     .Set("Gia", gia)
-                    .Set("DiaChi", diaChi)
-                    .Set("HinhAnh", hinhAnh);
+                    .Set("Diachi", diaChi)
+                    .Set("Hinhanh", hinhAnh);
 
                 // Thực hiện hoạt động cập nhật với bộ lọc và cập nhật đã xác định
                 var result = khachhangdangtin.UpdateOne(filter, update);
