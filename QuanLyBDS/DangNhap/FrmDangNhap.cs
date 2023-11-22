@@ -194,7 +194,7 @@ namespace QuanLyBDS
             }
             else
             {
-                UIMessageDialog.ShowErrorDialog(this, "Dăng kí không thành công, kiểm tra lại email hoặc mật khẩu");
+                UIMessageDialog.ShowErrorDialog(this, "Dăng kí không thành công,email hoặc số điện thoại đã tồn tại");
             }
             ResetValues();
         }
