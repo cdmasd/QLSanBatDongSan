@@ -112,7 +112,6 @@ C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLy
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDoimatkhau.resources
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmDuyetbai.resources
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmHotro.resources
-C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmMainNhanVien.resources
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmQLKhachHang.resources
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Properties.Resources.resources
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.csproj.GenerateResource.cache
@@ -199,3 +198,5 @@ D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\Quan
 D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\ref\QuanLyBDS.dll
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\bin\Debug\net6.0-windows\Microsoft.Practices.ServiceLocation.dll
 C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\bin\Debug\net6.0-windows\XAct.Core.PCL.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.Admin.FrmMainnAdmin.resources
+C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.NhanVien.FrmMainnNhanVien.resources

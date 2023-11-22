@@ -49,14 +49,15 @@
             // txtChitiethotro
             // 
             txtChitiethotro.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtChitiethotro.Location = new Point(14, 102);
+            txtChitiethotro.Location = new Point(14, 106);
             txtChitiethotro.Margin = new Padding(4, 5, 4, 5);
             txtChitiethotro.MinimumSize = new Size(1, 16);
             txtChitiethotro.Multiline = true;
             txtChitiethotro.Name = "txtChitiethotro";
             txtChitiethotro.Padding = new Padding(5);
             txtChitiethotro.ShowText = false;
-            txtChitiethotro.Size = new Size(693, 88);
+            txtChitiethotro.Size = new Size(763, 88);
+            txtChitiethotro.Style = Sunny.UI.UIStyle.Custom;
             txtChitiethotro.TabIndex = 12;
             txtChitiethotro.TextAlignment = ContentAlignment.MiddleLeft;
             txtChitiethotro.Watermark = "";
@@ -64,13 +65,14 @@
             // txtSodt
             // 
             txtSodt.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSodt.Location = new Point(469, 39);
+            txtSodt.Location = new Point(554, 39);
             txtSodt.Margin = new Padding(4, 5, 4, 5);
             txtSodt.MinimumSize = new Size(1, 16);
             txtSodt.Name = "txtSodt";
             txtSodt.Padding = new Padding(5);
             txtSodt.ShowText = false;
-            txtSodt.Size = new Size(238, 29);
+            txtSodt.Size = new Size(222, 29);
+            txtSodt.Style = Sunny.UI.UIStyle.Custom;
             txtSodt.TabIndex = 10;
             txtSodt.TextAlignment = ContentAlignment.MiddleLeft;
             txtSodt.Watermark = "";
@@ -79,7 +81,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(469, 10);
+            label3.Location = new Point(554, 10);
             label3.Name = "label3";
             label3.Size = new Size(192, 19);
             label3.TabIndex = 9;
@@ -87,11 +89,14 @@
             // 
             // btnDahotro
             // 
+            btnDahotro.FillColor = SystemColors.Highlight;
+            btnDahotro.FillHoverColor = Color.MidnightBlue;
             btnDahotro.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDahotro.Location = new Point(607, 203);
+            btnDahotro.Location = new Point(677, 205);
             btnDahotro.MinimumSize = new Size(1, 1);
             btnDahotro.Name = "btnDahotro";
             btnDahotro.Size = new Size(100, 35);
+            btnDahotro.Style = Sunny.UI.UIStyle.Custom;
             btnDahotro.TabIndex = 11;
             btnDahotro.Text = "Đã hỗ trợ";
             btnDahotro.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -107,6 +112,7 @@
             txtHotro.Padding = new Padding(5);
             txtHotro.ShowText = false;
             txtHotro.Size = new Size(238, 29);
+            txtHotro.Style = Sunny.UI.UIStyle.Custom;
             txtHotro.TabIndex = 8;
             txtHotro.TextAlignment = ContentAlignment.MiddleLeft;
             txtHotro.Watermark = "";
@@ -180,15 +186,17 @@
             dtView.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
             dtView.SelectedIndex = -1;
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtView.Size = new Size(698, 302);
+            dtView.Size = new Size(765, 302);
+            dtView.Style = Sunny.UI.UIStyle.Custom;
             dtView.TabIndex = 54;
             dtView.Click += dtView_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = SystemColors.Control;
             label8.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(296, 392);
+            label8.Location = new Point(335, 393);
             label8.Name = "label8";
             label8.Size = new Size(118, 19);
             label8.TabIndex = 55;
@@ -209,7 +217,8 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(722, 565);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(789, 565);
             Controls.Add(txtId);
             Controls.Add(label8);
             Controls.Add(dtView);
@@ -223,6 +232,7 @@
             Name = "FrmHotro";
             Padding = new Padding(0);
             ShowTitle = false;
+            Style = Sunny.UI.UIStyle.Custom;
             Text = "FrmHotro";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
             Load += FrmHotro_Load;

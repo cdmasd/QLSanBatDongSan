@@ -40,7 +40,7 @@
             PanelMain.MinimumSize = new Size(1, 1);
             PanelMain.Name = "PanelMain";
             PanelMain.Radius = 0;
-            PanelMain.Size = new Size(900, 565);
+            PanelMain.Size = new Size(1000, 565);
             PanelMain.Style = Sunny.UI.UIStyle.Custom;
             PanelMain.TabIndex = 0;
             PanelMain.Text = null;
@@ -49,15 +49,15 @@
             // FrmMain
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(900, 600);
+            ClientSize = new Size(1000, 600);
             Controls.Add(PanelMain);
             MaximizeBox = false;
-            MaximumSize = new Size(900, 600);
+            MaximumSize = new Size(1000, 600);
             Name = "FrmMain";
             ShowRadius = false;
             Style = Sunny.UI.UIStyle.Custom;
             Text = "Quản Lý Sàn Bất Động Sản";
-            TitleColor = SystemColors.MenuHighlight;
+            TitleColor = SystemColors.Highlight;
             TitleFont = new Font("Roboto Condensed", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
             ResumeLayout(false);

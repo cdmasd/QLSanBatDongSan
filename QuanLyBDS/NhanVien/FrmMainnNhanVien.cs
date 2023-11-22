@@ -1,6 +1,4 @@
-﻿using QuanLyBDS.KhachHang;
-using Sunny.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +10,17 @@ using System.Windows.Forms;
 
 namespace QuanLyBDS.NhanVien
 {
-    public partial class FrmMainNhanVien : UIForm
+    public partial class FrmMainnNhanVien : Form
     {
-        public FrmMainNhanVien()
+        public FrmMainnNhanVien()
         {
             InitializeComponent();
         }
-        void ResetColor()
+
+        private void btnKhachhang_Click(object sender, EventArgs e)
         {
-            btnKhachhang.BackColor = SystemColors.MenuHighlight;
-            btnDuyetbai.BackColor = SystemColors.MenuHighlight;
-            btnDaduyet.BackColor = SystemColors.MenuHighlight;
-            btnHotro.BackColor = SystemColors.MenuHighlight;
-            btnDoimatkhau.BackColor = SystemColors.MenuHighlight;
-        }
-        private void btnKhachHang_Click(object sender, EventArgs e)
-        {
-            ResetColor();
-            btnKhachhang.BackColor = Color.SteelBlue;
+            ResetButton();
+            btnKhachhang.BackColor = SystemColors.ActiveCaption;
             if (!CheckExistForm("FrmQLKhachHang"))
             {
                 FrmQLKhachHang kh = new FrmQLKhachHang();
@@ -43,6 +34,96 @@ namespace QuanLyBDS.NhanVien
                 ActiveChildForm("FrmQLKhachHang");
             }
         }
+
+        private void btnDuyetbai_Click(object sender, EventArgs e)
+        {
+            ResetButton();
+            btnDuyetbai.BackColor = SystemColors.ActiveCaption;
+            if (!CheckExistForm("FrmDuyetbai"))
+            {
+                FrmDuyetbai duyetbai = new FrmDuyetbai();
+                duyetbai.TopLevel = false;
+                panelNhanVien.Controls.Add(duyetbai);
+                duyetbai.Show();
+                duyetbai.BringToFront();
+            }
+            else
+            {
+                ActiveChildForm("FrmDuyetbai");
+            }
+        }
+
+        private void btnDaduyet_Click(object sender, EventArgs e)
+        {
+            ResetButton();
+            btnDaduyet.BackColor = SystemColors.ActiveCaption;
+            if (!CheckExistForm("FrmDaduyet"))
+            {
+                FrmDaduyet daduyet = new FrmDaduyet();
+                daduyet.TopLevel = false;
+                panelNhanVien.Controls.Add(daduyet);
+                daduyet.Show();
+                daduyet.BringToFront();
+            }
+            else
+            {
+                ActiveChildForm("FrmDaduyet");
+            }
+        }
+
+        private void btnHotro_Click(object sender, EventArgs e)
+        {
+            ResetButton();
+            btnHotro.BackColor = SystemColors.ActiveCaption;
+            if (!CheckExistForm("FrmHotro"))
+            {
+                FrmHotro ht = new FrmHotro();
+                ht.TopLevel = false;
+                panelNhanVien.Controls.Add(ht);
+                ht.Show();
+                ht.BringToFront();
+            }
+            else
+            {
+                ActiveChildForm("FrmHotro");
+            }
+        }
+
+        private void btnDoimatkhau_Click(object sender, EventArgs e)
+        {
+            ResetButton();
+            btnDoimatkhau.BackColor = SystemColors.ActiveCaption;
+            if (!CheckExistForm("FrmDoimatkhau"))
+            {
+                FrmDoimatkhau dmk = new FrmDoimatkhau();
+                dmk.TopLevel = false;
+                panelNhanVien.Controls.Add(dmk);
+                dmk.Show();
+                dmk.BringToFront();
+            }
+            else
+            {
+                ActiveChildForm("FrmDoimatkhau");
+            }
+        }
+
+        private void btnDangxuat_Click(object sender, EventArgs e)
+        {
+            FrmMain.mail = "Quản lý bất động sản";
+            FrmMain.session = 0;
+            this.Close();
+        }
+        #region UI
+        void ResetButton()
+        {
+            btnKhachhang.BackColor = SystemColors.Highlight;
+            btnDuyetbai.BackColor = SystemColors.Highlight;
+            btnDaduyet.BackColor = SystemColors.Highlight;
+            btnHotro.BackColor = SystemColors.Highlight;
+            btnDoimatkhau.BackColor = SystemColors.Highlight;
+        }
+        #endregion
+        #region Active form
         // Kiểm tra form đã tồn tại trước khi mở
         private bool CheckExistForm(string name)
         {
@@ -72,84 +153,6 @@ namespace QuanLyBDS.NhanVien
                 }
             }
         }
-
-        private void btnDuyetbai_Click(object sender, EventArgs e)
-        {
-            ResetColor();
-            btnDuyetbai.BackColor = Color.SteelBlue;
-            if (!CheckExistForm("FrmDuyetbai"))
-            {
-                FrmDuyetbai duyetbai = new FrmDuyetbai();
-                duyetbai.TopLevel = false;
-                panelNhanVien.Controls.Add(duyetbai);
-                duyetbai.Show();
-                duyetbai.BringToFront();
-            }
-            else
-            {
-                ActiveChildForm("FrmDuyetbai");
-            }
-        }
-
-        private void btnDaduyet_Click(object sender, EventArgs e)
-        {
-            ResetColor();
-            btnDaduyet.BackColor = Color.SteelBlue;
-            if (!CheckExistForm("FrmDaduyet"))
-            {
-                FrmDaduyet daduyet = new FrmDaduyet();
-                daduyet.TopLevel = false;
-                panelNhanVien.Controls.Add(daduyet);
-                daduyet.Show();
-                daduyet.BringToFront();
-            }
-            else
-            {
-                ActiveChildForm("FrmDaduyet");
-            }
-        }
-
-        private void btnHotro_Click(object sender, EventArgs e)
-        {
-            ResetColor();
-            btnHotro.BackColor = Color.SteelBlue;
-            if (!CheckExistForm("FrmHotro"))
-            {
-                FrmHotro ht = new FrmHotro();
-                ht.TopLevel = false;
-                panelNhanVien.Controls.Add(ht);
-                ht.Show();
-                ht.BringToFront();
-            }
-            else
-            {
-                ActiveChildForm("FrmHotro");
-            }
-        }
-
-        private void btnDoimatkhau_Click(object sender, EventArgs e)
-        {
-            ResetColor();
-            btnDoimatkhau.BackColor = Color.SteelBlue;
-            if (!CheckExistForm("FrmDoimatkhau"))
-            {
-                FrmDoimatkhau dmk = new FrmDoimatkhau();
-                dmk.TopLevel = false;
-                panelNhanVien.Controls.Add(dmk);
-                dmk.Show();
-                dmk.BringToFront();
-            }
-            else
-            {
-                ActiveChildForm("FrmDoimatkhau");
-            }
-        }
-
-        private void btnDangxuat_Click(object sender, EventArgs e)
-        {
-            FrmMain.mail = "Quản lý bất động sản";
-            FrmMain.session = 0;
-            this.Close();
-        }
+        #endregion
     }
 }

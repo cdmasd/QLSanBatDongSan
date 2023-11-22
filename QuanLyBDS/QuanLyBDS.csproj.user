@@ -16,6 +16,9 @@
     <Compile Update="Admin\FrmMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\FrmMainnAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin\FrmQLKhachHang-Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,7 +67,7 @@
     <Compile Update="NhanVien\FrmHotro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NhanVien\FrmMainNhanVien.cs">
+    <Compile Update="NhanVien\FrmMainnNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NhanVien\FrmQLKhachHang.cs">

@@ -57,11 +57,15 @@
             // 
             // btnXem
             // 
+            btnXem.BackColor = SystemColors.ActiveCaption;
+            btnXem.FillColor = SystemColors.Highlight;
+            btnXem.FillHoverColor = Color.MidnightBlue;
             btnXem.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXem.Location = new Point(433, 143);
+            btnXem.Location = new Point(517, 140);
             btnXem.MinimumSize = new Size(1, 1);
             btnXem.Name = "btnXem";
             btnXem.Size = new Size(100, 35);
+            btnXem.Style = Sunny.UI.UIStyle.Custom;
             btnXem.TabIndex = 54;
             btnXem.Text = "Xem ảnh";
             btnXem.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -115,7 +119,8 @@
             dtView.ScrollBarRectColor = Color.FromArgb(80, 160, 255);
             dtView.SelectedIndex = -1;
             dtView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtView.Size = new Size(698, 353);
+            dtView.Size = new Size(765, 356);
+            dtView.Style = Sunny.UI.UIStyle.Custom;
             dtView.TabIndex = 53;
             dtView.Click += dtView_Click;
             // 
@@ -123,13 +128,14 @@
             // 
             txtDiachi.Enabled = false;
             txtDiachi.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDiachi.Location = new Point(433, 42);
+            txtDiachi.Location = new Point(525, 39);
             txtDiachi.Margin = new Padding(4, 5, 4, 5);
             txtDiachi.MinimumSize = new Size(1, 16);
             txtDiachi.Name = "txtDiachi";
             txtDiachi.Padding = new Padding(5);
             txtDiachi.ShowText = false;
             txtDiachi.Size = new Size(203, 24);
+            txtDiachi.Style = Sunny.UI.UIStyle.Custom;
             txtDiachi.TabIndex = 49;
             txtDiachi.TextAlignment = ContentAlignment.MiddleLeft;
             txtDiachi.Watermark = "";
@@ -138,7 +144,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(429, 16);
+            label7.Location = new Point(521, 13);
             label7.Name = "label7";
             label7.Size = new Size(149, 19);
             label7.TabIndex = 48;
@@ -146,11 +152,15 @@
             // 
             // btnXoa
             // 
+            btnXoa.BackColor = SystemColors.ActiveCaption;
+            btnXoa.FillColor = SystemColors.Highlight;
+            btnXoa.FillHoverColor = Color.MidnightBlue;
             btnXoa.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Location = new Point(550, 144);
+            btnXoa.Location = new Point(634, 141);
             btnXoa.MinimumSize = new Size(1, 1);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(100, 35);
+            btnXoa.Style = Sunny.UI.UIStyle.Custom;
             btnXoa.TabIndex = 52;
             btnXoa.Text = "Xoá bài";
             btnXoa.TipsFont = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -160,13 +170,14 @@
             // 
             txtHinhanh.Enabled = false;
             txtHinhanh.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtHinhanh.Location = new Point(433, 102);
+            txtHinhanh.Location = new Point(525, 99);
             txtHinhanh.Margin = new Padding(4, 5, 4, 5);
             txtHinhanh.MinimumSize = new Size(1, 16);
             txtHinhanh.Name = "txtHinhanh";
             txtHinhanh.Padding = new Padding(5);
             txtHinhanh.ShowText = false;
             txtHinhanh.Size = new Size(203, 24);
+            txtHinhanh.Style = Sunny.UI.UIStyle.Custom;
             txtHinhanh.TabIndex = 50;
             txtHinhanh.TextAlignment = ContentAlignment.MiddleLeft;
             txtHinhanh.Watermark = "";
@@ -175,13 +186,14 @@
             // 
             txtGia.Enabled = false;
             txtGia.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtGia.Location = new Point(101, 154);
+            txtGia.Location = new Point(135, 152);
             txtGia.Margin = new Padding(4, 5, 4, 5);
             txtGia.MinimumSize = new Size(1, 16);
             txtGia.Name = "txtGia";
             txtGia.Padding = new Padding(5);
             txtGia.ShowText = false;
             txtGia.Size = new Size(203, 24);
+            txtGia.Style = Sunny.UI.UIStyle.Custom;
             txtGia.TabIndex = 47;
             txtGia.TextAlignment = ContentAlignment.MiddleLeft;
             txtGia.Watermark = "";
@@ -190,13 +202,14 @@
             // 
             txtSophong.Enabled = false;
             txtSophong.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSophong.Location = new Point(101, 119);
+            txtSophong.Location = new Point(135, 117);
             txtSophong.Margin = new Padding(4, 5, 4, 5);
             txtSophong.MinimumSize = new Size(1, 16);
             txtSophong.Name = "txtSophong";
             txtSophong.Padding = new Padding(5);
             txtSophong.ShowText = false;
             txtSophong.Size = new Size(203, 24);
+            txtSophong.Style = Sunny.UI.UIStyle.Custom;
             txtSophong.TabIndex = 46;
             txtSophong.TextAlignment = ContentAlignment.MiddleLeft;
             txtSophong.Watermark = "";
@@ -205,13 +218,14 @@
             // 
             txtDientich.Enabled = false;
             txtDientich.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDientich.Location = new Point(101, 84);
+            txtDientich.Location = new Point(135, 82);
             txtDientich.Margin = new Padding(4, 5, 4, 5);
             txtDientich.MinimumSize = new Size(1, 16);
             txtDientich.Name = "txtDientich";
             txtDientich.Padding = new Padding(5);
             txtDientich.ShowText = false;
             txtDientich.Size = new Size(203, 24);
+            txtDientich.Style = Sunny.UI.UIStyle.Custom;
             txtDientich.TabIndex = 45;
             txtDientich.TextAlignment = ContentAlignment.MiddleLeft;
             txtDientich.Watermark = "";
@@ -222,12 +236,13 @@
             cbLoainha.Enabled = false;
             cbLoainha.FillColor = Color.White;
             cbLoainha.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbLoainha.Location = new Point(101, 49);
+            cbLoainha.Location = new Point(135, 47);
             cbLoainha.Margin = new Padding(4, 5, 4, 5);
             cbLoainha.MinimumSize = new Size(63, 0);
             cbLoainha.Name = "cbLoainha";
             cbLoainha.Padding = new Padding(0, 0, 30, 2);
             cbLoainha.Size = new Size(203, 24);
+            cbLoainha.Style = Sunny.UI.UIStyle.Custom;
             cbLoainha.TabIndex = 44;
             cbLoainha.TextAlignment = ContentAlignment.MiddleLeft;
             cbLoainha.Watermark = "";
@@ -236,13 +251,14 @@
             // 
             txtTieude.Enabled = false;
             txtTieude.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTieude.Location = new Point(101, 14);
+            txtTieude.Location = new Point(135, 12);
             txtTieude.Margin = new Padding(4, 5, 4, 5);
             txtTieude.MinimumSize = new Size(1, 16);
             txtTieude.Name = "txtTieude";
             txtTieude.Padding = new Padding(5);
             txtTieude.ShowText = false;
             txtTieude.Size = new Size(203, 24);
+            txtTieude.Style = Sunny.UI.UIStyle.Custom;
             txtTieude.TabIndex = 43;
             txtTieude.TextAlignment = ContentAlignment.MiddleLeft;
             txtTieude.Watermark = "";
@@ -251,7 +267,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(429, 76);
+            label6.Location = new Point(521, 73);
             label6.Name = "label6";
             label6.Size = new Size(75, 19);
             label6.TabIndex = 42;
@@ -261,7 +277,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(54, 157);
+            label5.Location = new Point(88, 155);
             label5.Name = "label5";
             label5.Size = new Size(38, 19);
             label5.TabIndex = 41;
@@ -271,7 +287,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(15, 122);
+            label4.Location = new Point(49, 120);
             label4.Name = "label4";
             label4.Size = new Size(77, 19);
             label4.TabIndex = 40;
@@ -281,7 +297,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(18, 87);
+            label3.Location = new Point(52, 85);
             label3.Name = "label3";
             label3.Size = new Size(74, 19);
             label3.TabIndex = 39;
@@ -291,7 +307,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(19, 52);
+            label2.Location = new Point(53, 50);
             label2.Name = "label2";
             label2.Size = new Size(73, 19);
             label2.TabIndex = 38;
@@ -301,7 +317,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(27, 17);
+            label1.Location = new Point(61, 15);
             label1.Name = "label1";
             label1.Size = new Size(65, 19);
             label1.TabIndex = 37;
@@ -310,8 +326,9 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = SystemColors.Control;
             label8.Font = new Font("Roboto Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(278, 370);
+            label8.Location = new Point(335, 366);
             label8.Name = "label8";
             label8.Size = new Size(118, 19);
             label8.TabIndex = 56;
@@ -321,7 +338,7 @@
             // txtId
             // 
             txtId.AutoSize = true;
-            txtId.Location = new Point(330, 66);
+            txtId.Location = new Point(407, 39);
             txtId.Name = "txtId";
             txtId.Size = new Size(55, 16);
             txtId.TabIndex = 57;
@@ -332,7 +349,8 @@
             // 
             AllowShowTitle = false;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(722, 565);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(789, 565);
             Controls.Add(txtId);
             Controls.Add(label8);
             Controls.Add(btnXem);
@@ -355,6 +373,7 @@
             Name = "FrmDaduyet";
             Padding = new Padding(0);
             ShowTitle = false;
+            Style = Sunny.UI.UIStyle.Custom;
             Text = "FrmDaduyet";
             ZoomScaleRect = new Rectangle(15, 15, 800, 450);
             Load += FrmDaduyet_Load;

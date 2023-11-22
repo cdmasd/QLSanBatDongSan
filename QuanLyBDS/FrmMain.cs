@@ -31,7 +31,7 @@ namespace QuanLyBDS
         private void FrmMain_Load(object sender, EventArgs e)
         {
             OpenVaitro();
-            if(session == 0)
+            if (session == 0)
             {
                 DangNhap();
             }
@@ -59,7 +59,7 @@ namespace QuanLyBDS
                 }
                 else if (dn.vaitro == "nhanvien")
                 {
-                    FrmMainNhanVien nv = new FrmMainNhanVien();
+                    FrmMainnNhanVien nv = new FrmMainnNhanVien();
                     nv.TopLevel = false;
                     PanelMain.Controls.Add(nv);
                     nv.Show();
@@ -98,35 +98,6 @@ namespace QuanLyBDS
         {
             this.Refresh();
             FrmMain_Load(sender, e);
-        }
-        private bool CheckExistForm(string name)
-        {
-            FormCollection fc = Application.OpenForms;
-            var check = false;
-            foreach (Form frm in fc)
-            {
-                if (frm.Name == name)
-                {
-                    frm.BringToFront();
-                    check = true;
-                    break;
-                }
-            }
-            return check;
-        }
-
-        // Show form lên trên cùng của form cha
-        private void ActiveChildForm(string name)
-        {
-            FormCollection fc = Application.OpenForms;
-            foreach (Form frm in fc)
-            {
-                if (frm.Name == name)
-                {
-                    frm.BringToFront();
-                    break;
-                }
-            }
         }
     }
 }

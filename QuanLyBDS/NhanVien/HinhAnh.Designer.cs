@@ -37,7 +37,7 @@
             pic.Dock = DockStyle.Fill;
             pic.Location = new Point(0, 35);
             pic.Name = "pic";
-            pic.Size = new Size(800, 415);
+            pic.Size = new Size(847, 471);
             pic.SizeMode = PictureBoxSizeMode.Zoom;
             pic.TabIndex = 0;
             pic.TabStop = false;
@@ -45,7 +45,7 @@
             // HinhAnh
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(847, 506);
             Controls.Add(pic);
             Name = "HinhAnh";
             Text = "Hình ảnh";

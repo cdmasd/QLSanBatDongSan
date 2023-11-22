@@ -142,7 +142,7 @@ namespace QuanLyBDS.NhanVien
         {
             if (txtTieude.Text != "")
             {
-                if (nv.Duyetbai(txtId.Text,FrmMain.mail))
+                if (nv.Duyetbai(txtId.Text, FrmMain.mail))
                 {
                     ShowSuccessNotifier("Thành công");
                     resetValues();
