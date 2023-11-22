@@ -28,23 +28,14 @@ namespace DAL_QuanLyBDS
                 { "TrangThai", true }
             }).ToList();
         }
-        public bool DeleteBaiDang(string id,string cause)
+        public bool DeleteBaiDang(string id)
         {
             try
             {
-                if(cause == "tuchoi")
-                {
                     dangtin.DeleteOne(new BsonDocument
                     {
                         { "_id", id }
                     });
-                } else
-                {
-                    dangtin.DeleteOne(new BsonDocument
-                    {
-                        { "_id", id }
-                    });
-                }
                 return true;
             }
             catch

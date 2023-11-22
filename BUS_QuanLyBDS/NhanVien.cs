@@ -24,9 +24,9 @@ namespace BUS_QuanLyBDS
         {
             return nv.Duyetbai(id, email);
         }
-        public bool DeleteBaiDang(string id, string cause)
+        public bool DeleteBaiDang(string id)
         {
-            return nv.DeleteBaiDang(id, cause);
+            return nv.DeleteBaiDang(id);
         }
         public List<BsonDocument> Chuahotro()
         {
