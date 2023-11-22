@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vcaGaExPcYH4/epRbo8Tq9WqligKV9Bde4l2Xa5poVgd6kPiRD6haHRVpGzpyjishDPMpZF0IXXboiQjF3EPVA==",
+  "dgSpecHash": "vJ73T39PEMVRxAVy4z+o+vCgeHBJzJAFs4pGn4qBcJvnGAnj3cplDMVBbtX7qLe4l5Vp3vZH0nTdIs11flHJrA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
   "expectedPackageFiles": [
@@ -8,12 +8,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
