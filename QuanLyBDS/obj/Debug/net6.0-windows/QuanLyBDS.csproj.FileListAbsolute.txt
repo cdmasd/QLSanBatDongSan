@@ -197,3 +197,5 @@ D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\bin\Debug\net6.0-windows\DAL_
 D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.csproj.CopyComplete
 D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\QuanLyBDS.genruntimeconfig.cache
 D:\PRO131_DA1_K4\Project\QLSanBatDongSan\QuanLyBDS\obj\Debug\net6.0-windows\ref\QuanLyBDS.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\bin\Debug\net6.0-windows\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Admin\Desktop\QLSanBatDongSan\QuanLyBDS\bin\Debug\net6.0-windows\XAct.Core.PCL.dll

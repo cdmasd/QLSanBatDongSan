@@ -1,19 +1,19 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "DzN0C/A2xCuwDqvVkrC1AvrW/MuvG5A7J4/4royrqBGVNHQbwJ2m71ZiZCJypUI9du4iltmrb+MKqC5t3SOXAw==",
+  "dgSpecHash": "vcaGaExPcYH4/epRbo8Tq9WqligKV9Bde4l2Xa5poVgd6kPiRD6haHRVpGzpyjishDPMpZF0IXXboiQjF3EPVA==",
   "success": true,
-  "projectFilePath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
-  "expectedPackageFiles": [],
-=======
-  "dgSpecHash": "Cq59U/9kpVNCeEldXcMHzVSpHGtpFcaeXZnXllW8qayDjdDyVudNZmypd6tt3Zx25m5jRzkA4KJRRgrylPwUfQ==",
-  "success": true,
-  "projectFilePath": "D:\\PRO131_DA1_K4\\Project\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\DTO_QuanLyBDS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ASUS\\.nuget\\packages\\mongodb.bson\\2.22.0\\mongodb.bson.2.22.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\mongodb.bson\\2.22.0\\mongodb.bson.2.22.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
->>>>>>> ChienBr
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DTO_QuanLyBDS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
