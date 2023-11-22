@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "suAUjj+ESU0buYtC0kIncIXkoPIuQsKexd+b3fjN09sPUhUbGyRMwhOMXdOlB0oJj4UWbVN/vZvSVR5YV4fpBA==",
+  "dgSpecHash": "aIt23RiXKOzBbf8VC6Sd6DY4059PC0PpEuE/4mthbv01mnZ5ubLUTmqbI+GeNPby0jTX/pL/cGGrwQU0f/+VAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\DAL_QuanLyBDS.csproj",
   "expectedPackageFiles": [
@@ -23,12 +23,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Admin\\Desktop\\QLSanBatDongSan\\DAL_QuanLyBDS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

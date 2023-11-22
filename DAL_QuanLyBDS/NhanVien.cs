@@ -13,6 +13,7 @@ namespace DAL_QuanLyBDS
         IMongoCollection<BsonDocument> dangtin = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("KhachHangDangTin");
         IMongoCollection<BsonDocument> nhanvien = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("NhanVien");
         IMongoCollection<BsonDocument> ticket = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("Ticket");
+        IMongoCollection<BsonDocument> Khachhang = client.GetDatabase("QLBatDongSan").GetCollection<BsonDocument>("Khachhang");
         public List<BsonDocument> Chuaduyet()
         {
             return dangtin.Find(new BsonDocument
@@ -105,6 +106,34 @@ namespace DAL_QuanLyBDS
             }
             catch
             {
+                return false;
+            }
+        }
+        public List<BsonDocument> Getkhachhang()
+        {
+            var filter = Builders<BsonDocument>.Filter.Empty;
+            var KhachhangData = Khachhang.Find(filter).ToList();
+            return KhachhangData;
+        }
+        public bool UpdataKhachhang(string id, string email, string hoten, string sdt, double sodu)
+        {
+            try
+            {
+                var filterBuilder = Builders<BsonDocument>.Filter;
+                var filter = filterBuilder.Eq("_id", id);
+                var updateBuilder = Builders<BsonDocument>.Update;
+                var update = updateBuilder
+                    .Set("Email", email)
+                    .Set("Hoten", hoten)
+                    .Set("Sodienthoai", sdt)
+                    .Set("SoDu", sodu);
+                var result = Khachhang.UpdateOne(filter, update);
+                return result.ModifiedCount > 0;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Lỗi khi cập nhật bài đăng: {ex.Message}");
                 return false;
             }
         }
