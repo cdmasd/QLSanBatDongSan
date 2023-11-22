@@ -62,7 +62,8 @@ namespace DAL_QuanLyBDS
                     {"Email",email},
                     {"Hoten",name },
                     {"Sodienthoai",phone },
-                    {"Sodu", 0 }
+                    {"Sodu", 0 },
+                    {"Ngaydangki" , DateTime.Now.ToString("dd-MM-yyyy")}
                 });
                 registerAccount(email, password);
                 return true;
